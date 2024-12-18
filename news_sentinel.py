@@ -143,10 +143,11 @@ def main():
     logging.info(f"Total articles matching keywords: {len(filtered_articles)}")
 
     # Ensure at least MINIMUM_ARTICLES are saved
-    if len(filtered_articles) < MINIMUM_ARTICLES:
+    additional_articles_needed = max(0, MINIMUM_ARTICLES - len(filtered_articles))
+    if additional_articles_needed > 0:
         additional_articles = [article for article in unique_articles if article not in filtered_articles]
-        filtered_articles.extend(additional_articles[:MINIMUM_ARTICLES - len(filtered_articles)])
-        logging.info(f"Added {len(additional_articles[:MINIMUM_ARTICLES - len(filtered_articles)])} non-matching articles to meet minimum quota of {MINIMUM_ARTICLES}.")
+        filtered_articles.extend(additional_articles[:additional_articles_needed])
+        logging.info(f"Added {len(additional_articles[:additional_articles_needed])} non-matching articles to meet minimum quota of {MINIMUM_ARTICLES}.")
 
     # Save to CSV
     save_to_csv(filtered_articles, OUTPUT_FILE)
