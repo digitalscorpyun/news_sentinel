@@ -51,15 +51,14 @@ def fetch_feed(url):
         logging.error(f"Error fetching feed {url}: {e}")
         return []
 
-# Helper function to handle requests gracefully
-def safe_request(url):
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        return response.content
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Failed to download content from {url}: {e}")
-        return None
+# Retry fetching feeds for robustness
+def fetch_feed_with_retry(url, retries=3):
+    for attempt in range(retries):
+        articles = fetch_feed(url)
+        if articles:
+            return articles
+        logging.warning(f"Retrying feed: {url} (Attempt {attempt + 1}/{retries})")
+    return []
 
 # Ensure at least one article from each source
 def ensure_one_article_per_source(all_articles, sources):
@@ -121,7 +120,7 @@ def main():
             continue
 
         logging.info(f"Fetching articles from {source_name}")
-        entries = fetch_feed(feed_url)
+        entries = fetch_feed_with_retry(feed_url)
 
         for entry in entries:
             article_id = entry.get("link", "")  # Use link as a unique identifier
