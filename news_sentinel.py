@@ -5,14 +5,28 @@ import logging
 from datetime import datetime
 import os
 import subprocess
+import argparse
+from collections import defaultdict
+from nltk.stem import PorterStemmer
 
-# Configure logging
-logging.basicConfig(
-    filename="news_sentinel.log",
-    level=logging.INFO,
-    format="[%(asctime)s] %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S"
-)
+# Configure logging dynamically
+parser = argparse.ArgumentParser()
+parser.add_argument('--log-to-console', action='store_true', help="Log to console instead of file")
+args = parser.parse_args()
+
+if args.log_to_console:
+    logging.basicConfig(
+        level=logging.INFO,
+        format="[%(asctime)s] %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S"
+    )
+else:
+    logging.basicConfig(
+        filename="news_sentinel.log",
+        level=logging.INFO,
+        format="[%(asctime)s] %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S"
+    )
 
 # Define constants
 KEYWORDS = ["AI", "artificial intelligence", "machine learning", "deep learning", "Python"]
@@ -20,8 +34,7 @@ EXCLUDED_SOURCES = ["https://blavity.com/rss"]
 RSS_FEEDS = {
     "The New York Times": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
     "The Atlantic": "https://www.theatlantic.com/feed/all/",
-    "Blavity": "https://blavity.com/rss",
-        "Black Enterprise": "https://www.blackenterprise.com/feed/",
+    "Black Enterprise": "https://www.blackenterprise.com/feed/",
     "NPR": "https://www.npr.org/rss/rss.php?id=1001",
     "Reuters": "https://feeds.reuters.com/reuters/topNews",
     "CNET": "https://www.cnet.com/rss/news/",
@@ -37,6 +50,8 @@ RSS_FEEDS = {
 OUTPUT_FILE = f"news_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
 SEEN_ARTICLES = set()  # To track seen articles
 MINIMUM_ARTICLES = 100  # Ensure at least 100 articles per run
+
+stemmer = PorterStemmer()
 
 # Helper function to fetch and parse RSS feeds
 def fetch_feed(url):
@@ -74,13 +89,18 @@ def ensure_one_article_per_source(all_articles, sources):
 
     return unique_articles
 
-# Filter articles based on keywords
+# Filter articles based on keywords using stemming
 def filter_articles_by_keywords(articles, keywords):
     filtered = []
+    stemmed_keywords = [stemmer.stem(keyword.lower()) for keyword in keywords]
+
     for article in articles:
         title = article.get("title", "").lower()
         description = article.get("summary", "").lower()  # Use "summary" for description
-        if any(keyword.lower() in (title + description) for keyword in keywords):
+        title_stems = [stemmer.stem(word) for word in title.split()]
+        description_stems = [stemmer.stem(word) for word in description.split()]
+
+        if any(keyword in title_stems + description_stems for keyword in stemmed_keywords):
             filtered.append(article)
     return filtered
 
@@ -88,12 +108,13 @@ def filter_articles_by_keywords(articles, keywords):
 def save_to_csv(articles, filename):
     with open(filename, mode="w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
-        writer.writerow(["title", "link", "source"])
+        writer.writerow(["title", "link", "source", "direct_link"])
         for article in articles:
             writer.writerow([
                 article.get("title"),
                 f'=HYPERLINK("{article.get("link")}")',
-                article.get("source_name")
+                article.get("source_name"),
+                article.get("link")
             ])
 
 # Automate Git tracking and pushing
