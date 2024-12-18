@@ -1,119 +1,23 @@
-[2024-12-17 13:51:58] News Sentinel script started.
-[2024-12-17 13:51:58] Fetched 27 articles from https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
-[2024-12-17 13:51:58] Fetched 25 articles from https://www.theatlantic.com/feed/all/
-[2024-12-17 13:51:59] Fetched 10 articles from https://blavity.com/rss
-[2024-12-17 13:52:00] Fetched 50 articles from https://www.theroot.com/rss
-[2024-12-17 13:52:01] Fetched 10 articles from https://www.blackenterprise.com/feed/
-[2024-12-17 13:52:01] Fetched 10 articles from https://www.npr.org/rss/rss.php?id=1001
-[2024-12-17 13:52:01] Fetched 0 articles from https://feeds.reuters.com/reuters/topNews
-[2024-12-17 13:52:01] Total articles fetched: 132
-[2024-12-17 13:52:01] Total articles matching keywords: 0
-[2024-12-17 13:52:01] No new articles to save.
-[2024-12-17 13:52:01] News Sentinel script completed successfully.
-[2024-12-17 14:14:24] News Sentinel script started.
-[2024-12-17 14:14:25] Fetched 27 articles from https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
-[2024-12-17 14:14:45] Fetched 25 articles from https://www.theatlantic.com/feed/all/
-[2024-12-17 14:14:56] Fetched 10 articles from https://blavity.com/rss
-[2024-12-17 14:14:56] Error extracting content from https://blavity.com/chamillionaire-net-worth: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/chamillionaire-net-worth on URL https://blavity.com/chamillionaire-net-worth
-[2024-12-17 14:14:56] Error extracting content from https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls on URL https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls
-[2024-12-17 14:14:56] Error extracting content from https://blavity.com/biden-sets-records-for-appointing-black-women-judges: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/biden-sets-records-for-appointing-black-women-judges on URL https://blavity.com/biden-sets-records-for-appointing-black-women-judges
-[2024-12-17 14:14:56] Error extracting content from https://blavity.com/bet-year-in-black-2024: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/bet-year-in-black-2024 on URL https://blavity.com/bet-year-in-black-2024
-[2024-12-17 14:14:56] Error extracting content from https://blavity.com/beyond-the-gates-cbs-first-look-teaser: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/beyond-the-gates-cbs-first-look-teaser on URL https://blavity.com/beyond-the-gates-cbs-first-look-teaser
-[2024-12-17 14:14:57] Error extracting content from https://blavity.com/the-war-of-the-rohirrim-ending-explained: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/the-war-of-the-rohirrim-ending-explained on URL https://blavity.com/the-war-of-the-rohirrim-ending-explained
-[2024-12-17 14:14:57] Error extracting content from https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know on URL https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know
-[2024-12-17 14:14:57] Error extracting content from https://blavity.com/who-wins-when-thin-is-in: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/who-wins-when-thin-is-in on URL https://blavity.com/who-wins-when-thin-is-in
-[2024-12-17 14:14:57] Error extracting content from https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars on URL https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars
-[2024-12-17 14:14:57] Error extracting content from https://blavity.com/chette-williams-auburn-chaplain-dies: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/chette-williams-auburn-chaplain-dies on URL https://blavity.com/chette-williams-auburn-chaplain-dies
-[2024-12-17 14:14:58] Fetched 50 articles from https://www.theroot.com/rss
-[2024-12-17 14:16:02] Fetched 10 articles from https://www.blackenterprise.com/feed/
-[2024-12-17 14:16:14] Fetched 10 articles from https://www.npr.org/rss/rss.php?id=1001
-[2024-12-17 14:16:18] Total articles fetched: 132
-[2024-12-17 14:16:18] Total articles matching keywords: 15
-[2024-12-17 14:16:19] Saved 15 new articles to news.csv
-[2024-12-17 14:16:19] News Sentinel script completed successfully.
-[2024-12-17 14:26:57] News Sentinel script started.
-[2024-12-17 14:26:58] Fetched 28 articles from https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
-[2024-12-17 14:26:58] Fetched 25 articles from https://www.theatlantic.com/feed/all/
-[2024-12-17 14:26:59] Fetched 10 articles from https://blavity.com/rss
-[2024-12-17 14:26:59] Fetched 50 articles from https://www.theroot.com/rss
-[2024-12-17 14:26:59] Total articles fetched: 113
-[2024-12-17 14:26:59] Total articles matching keywords: 0
-[2024-12-17 14:27:00] No articles to save.
-[2024-12-17 14:27:00] News Sentinel script completed successfully.
-[2024-12-17 14:33:53] News Sentinel script started.
-[2024-12-17 14:33:54] Fetched 29 articles from https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
-[2024-12-17 14:34:04] Fetched 25 articles from https://www.theatlantic.com/feed/all/
-[2024-12-17 14:34:10] Fetched 10 articles from https://blavity.com/rss
-[2024-12-17 14:34:10] Failed to download content for https://blavity.com/chamillionaire-net-worth: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/chamillionaire-net-worth on URL https://blavity.com/chamillionaire-net-worth
-[2024-12-17 14:34:11] Failed to download content for https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls on URL https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls
-[2024-12-17 14:34:11] Failed to download content for https://blavity.com/biden-sets-records-for-appointing-black-women-judges: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/biden-sets-records-for-appointing-black-women-judges on URL https://blavity.com/biden-sets-records-for-appointing-black-women-judges
-[2024-12-17 14:34:11] Failed to download content for https://blavity.com/bet-year-in-black-2024: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/bet-year-in-black-2024 on URL https://blavity.com/bet-year-in-black-2024
-[2024-12-17 14:34:11] Failed to download content for https://blavity.com/beyond-the-gates-cbs-first-look-teaser: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/beyond-the-gates-cbs-first-look-teaser on URL https://blavity.com/beyond-the-gates-cbs-first-look-teaser
-[2024-12-17 14:34:11] Failed to download content for https://blavity.com/the-war-of-the-rohirrim-ending-explained: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/the-war-of-the-rohirrim-ending-explained on URL https://blavity.com/the-war-of-the-rohirrim-ending-explained
-[2024-12-17 14:34:11] Failed to download content for https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know on URL https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know
-[2024-12-17 14:34:11] Failed to download content for https://blavity.com/who-wins-when-thin-is-in: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/who-wins-when-thin-is-in on URL https://blavity.com/who-wins-when-thin-is-in
-[2024-12-17 14:34:11] Failed to download content for https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars on URL https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars
-[2024-12-17 14:34:12] Failed to download content for https://blavity.com/chette-williams-auburn-chaplain-dies: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/chette-williams-auburn-chaplain-dies on URL https://blavity.com/chette-williams-auburn-chaplain-dies
-[2024-12-17 14:34:12] Fetched 50 articles from https://www.theroot.com/rss
-[2024-12-17 14:34:43] Total articles fetched: 114
-[2024-12-17 14:34:43] Total articles matching keywords: 15
-[2024-12-17 14:34:44] Saved 15 articles to news.csv
-[2024-12-17 14:34:44] News Sentinel script completed successfully.
-[2024-12-17 14:54:29] News Sentinel script started.
-[2024-12-17 14:54:30] Fetched 29 articles from https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
-[2024-12-17 14:54:40] Fetched 25 articles from https://www.theatlantic.com/feed/all/
-[2024-12-17 14:54:49] Fetched 10 articles from https://blavity.com/rss
-[2024-12-17 14:54:49] Failed to download content for https://blavity.com/chamillionaire-net-worth: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/chamillionaire-net-worth on URL https://blavity.com/chamillionaire-net-worth
-[2024-12-17 14:54:49] Failed to download content for https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls on URL https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls
-[2024-12-17 14:54:49] Failed to download content for https://blavity.com/biden-sets-records-for-appointing-black-women-judges: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/biden-sets-records-for-appointing-black-women-judges on URL https://blavity.com/biden-sets-records-for-appointing-black-women-judges
-[2024-12-17 14:54:49] Failed to download content for https://blavity.com/bet-year-in-black-2024: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/bet-year-in-black-2024 on URL https://blavity.com/bet-year-in-black-2024
-[2024-12-17 14:54:49] Failed to download content for https://blavity.com/beyond-the-gates-cbs-first-look-teaser: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/beyond-the-gates-cbs-first-look-teaser on URL https://blavity.com/beyond-the-gates-cbs-first-look-teaser
-[2024-12-17 14:54:49] Failed to download content for https://blavity.com/the-war-of-the-rohirrim-ending-explained: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/the-war-of-the-rohirrim-ending-explained on URL https://blavity.com/the-war-of-the-rohirrim-ending-explained
-[2024-12-17 14:54:49] Failed to download content for https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know on URL https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know
-[2024-12-17 14:54:50] Failed to download content for https://blavity.com/who-wins-when-thin-is-in: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/who-wins-when-thin-is-in on URL https://blavity.com/who-wins-when-thin-is-in
-[2024-12-17 14:54:50] Failed to download content for https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars on URL https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars
-[2024-12-17 14:54:50] Failed to download content for https://blavity.com/chette-williams-auburn-chaplain-dies: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/chette-williams-auburn-chaplain-dies on URL https://blavity.com/chette-williams-auburn-chaplain-dies
-[2024-12-17 14:54:50] Fetched 50 articles from https://www.theroot.com/rss
-[2024-12-17 14:56:15] Fetched 10 articles from https://www.blackenterprise.com/feed/
-[2024-12-17 14:56:32] Fetched 10 articles from https://www.npr.org/rss/rss.php?id=1001
-[2024-12-17 14:56:39] Fetched 0 articles from https://feeds.reuters.com/reuters/topNews
-[2024-12-17 14:56:40] Fetched 25 articles from https://www.cnet.com/rss/news/
-[2024-12-17 14:57:30] Fetched 50 articles from https://www.wired.com/feed/rss
-[2024-12-17 14:58:27] Fetched 10 articles from https://www.theverge.com/rss/index.xml
-[2024-12-17 14:58:34] Fetched 20 articles from https://techcrunch.com/feed/
-[2024-12-17 14:59:03] Fetched 100 articles from https://mashable.com/feeds/rss/all
-[2024-12-17 15:00:44] Fetched 32 articles from https://www.bbc.co.uk/news/rss.xml
-[2024-12-17 15:01:09] Fetched 54 articles from https://www.theguardian.com/world/rss
-[2024-12-17 15:02:18] Fetched 0 articles from https://www.usatoday.com/rss/news/
-[2024-12-17 15:02:19] Total articles fetched: 425
-[2024-12-17 15:02:19] Total articles matching keywords: 37
-[2024-12-17 15:16:18] News Sentinel script started.
-[2024-12-17 15:16:18] Fetched 29 articles from https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
-[2024-12-17 15:16:28] Fetched 25 articles from https://www.theatlantic.com/feed/all/
-[2024-12-17 15:16:34] Fetched 10 articles from https://blavity.com/rss
-[2024-12-17 15:16:35] Failed to download content for https://blavity.com/chamillionaire-net-worth: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/chamillionaire-net-worth on URL https://blavity.com/chamillionaire-net-worth
-[2024-12-17 15:16:35] Failed to download content for https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls on URL https://blavity.com/justin-trudeau-canada-prime-minister-resign-calls
-[2024-12-17 15:16:35] Failed to download content for https://blavity.com/biden-sets-records-for-appointing-black-women-judges: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/biden-sets-records-for-appointing-black-women-judges on URL https://blavity.com/biden-sets-records-for-appointing-black-women-judges
-[2024-12-17 15:16:35] Failed to download content for https://blavity.com/bet-year-in-black-2024: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/bet-year-in-black-2024 on URL https://blavity.com/bet-year-in-black-2024
-[2024-12-17 15:16:35] Failed to download content for https://blavity.com/beyond-the-gates-cbs-first-look-teaser: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/beyond-the-gates-cbs-first-look-teaser on URL https://blavity.com/beyond-the-gates-cbs-first-look-teaser
-[2024-12-17 15:16:35] Failed to download content for https://blavity.com/the-war-of-the-rohirrim-ending-explained: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/the-war-of-the-rohirrim-ending-explained on URL https://blavity.com/the-war-of-the-rohirrim-ending-explained
-[2024-12-17 15:16:35] Failed to download content for https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know on URL https://blavity.com/monsters-we-make-manga-coryxkenshin-announces-series-after-long-youtube-break-and-heres-what-we-know
-[2024-12-17 15:16:35] Failed to download content for https://blavity.com/who-wins-when-thin-is-in: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/who-wins-when-thin-is-in on URL https://blavity.com/who-wins-when-thin-is-in
-[2024-12-17 15:16:36] Failed to download content for https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars on URL https://blavity.com/megan-thee-stallion-tory-lanez-harassing-her-behind-bars
-[2024-12-17 15:16:36] Failed to download content for https://blavity.com/chette-williams-auburn-chaplain-dies: Article `download()` failed with 403 Client Error: Forbidden for url: https://blavity.com/chette-williams-auburn-chaplain-dies on URL https://blavity.com/chette-williams-auburn-chaplain-dies
-[2024-12-17 15:16:36] Fetched 50 articles from https://www.theroot.com/rss
-[2024-12-17 15:17:50] Fetched 10 articles from https://www.blackenterprise.com/feed/
-[2024-12-17 15:18:03] Fetched 10 articles from https://www.npr.org/rss/rss.php?id=1001
-[2024-12-17 15:18:06] Fetched 0 articles from https://feeds.reuters.com/reuters/topNews
-[2024-12-17 15:18:06] Fetched 25 articles from https://www.cnet.com/rss/news/
-[2024-12-17 15:19:28] Fetched 50 articles from https://www.wired.com/feed/rss
-[2024-12-17 15:20:50] Fetched 10 articles from https://www.theverge.com/rss/index.xml
-[2024-12-17 15:20:58] Fetched 20 articles from https://techcrunch.com/feed/
-[2024-12-17 15:21:16] Fetched 100 articles from https://mashable.com/feeds/rss/all
-[2024-12-17 15:22:24] Fetched 32 articles from https://www.bbc.co.uk/news/rss.xml
-[2024-12-17 15:22:46] Fetched 54 articles from https://www.theguardian.com/world/rss
-[2024-12-17 15:23:24] Fetched 0 articles from https://www.usatoday.com/rss/news/
-[2024-12-17 15:23:24] Total articles fetched: 425
-[2024-12-17 15:23:24] Total articles matching keywords: 37
-[2024-12-17 15:23:25] Saved 37 articles to news.csv
-[2024-12-17 15:23:25] News Sentinel script completed successfully.
+[2024-12-17 18:53:45] News Sentinel script started.
+[2024-12-17 18:53:45] Fetching articles from The New York Times
+[2024-12-17 18:53:45] Fetching articles from The Atlantic
+[2024-12-17 18:53:46] Skipping excluded source: https://blavity.com/rss
+[2024-12-17 18:53:46] Fetching articles from The Root
+[2024-12-17 18:53:47] Fetching articles from Black Enterprise
+[2024-12-17 18:53:48] Fetching articles from NPR
+[2024-12-17 18:53:49] Fetching articles from Reuters
+[2024-12-17 18:53:49] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
+[2024-12-17 18:53:49] Fetching articles from CNET
+[2024-12-17 18:53:49] Fetching articles from Wired
+[2024-12-17 18:53:49] Fetching articles from The Verge
+[2024-12-17 18:53:50] Fetching articles from TechCrunch
+[2024-12-17 18:53:50] Fetching articles from Mashable
+[2024-12-17 18:53:53] Fetching articles from BBC News
+[2024-12-17 18:53:53] Fetching articles from The Guardian
+[2024-12-17 18:53:54] Fetching articles from USA Today
+[2024-12-17 18:53:54] Failed to parse feed: https://www.usatoday.com/rss/news/
+[2024-12-17 18:53:54] Total articles fetched: 415
+[2024-12-17 18:53:54] Total unique articles by source: 12
+[2024-12-17 18:53:54] Saved 12 articles to news_20241217_185345.csv
+[2024-12-17 18:53:54] Saved 4 filtered articles to filtered_news_20241217_185345.csv
+[2024-12-17 18:53:54] News Sentinel script completed successfully.

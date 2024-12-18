@@ -1,133 +1,161 @@
-import os
-import pandas as pd
+import requests
 import feedparser
-from newspaper import Article
+import csv
+import logging
 from datetime import datetime
+import os
+import subprocess
 
-# -----------------------------
-# Configuration
-# -----------------------------
-OUTPUT_FILE = "news.csv"
-LOG_FILE = "news_sentinel.log"
+# Configure logging
+logging.basicConfig(
+    filename="news_sentinel.log",
+    level=logging.INFO,
+    format="[%(asctime)s] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
 
-RSS_FEEDS = [
-    "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-    "https://www.theatlantic.com/feed/all/",
-    "https://blavity.com/rss",
-    "https://www.theroot.com/rss",
-    "https://www.blackenterprise.com/feed/",
-    "https://www.npr.org/rss/rss.php?id=1001",
-    "https://feeds.reuters.com/reuters/topNews",
-    "https://www.cnet.com/rss/news/",
-    "https://www.wired.com/feed/rss",
-    "https://www.theverge.com/rss/index.xml",
-    "https://techcrunch.com/feed/",
-    "https://mashable.com/feeds/rss/all",
-    "https://www.bbc.co.uk/news/rss.xml",
-    "https://www.theguardian.com/world/rss",
-    "https://www.usatoday.com/rss/news/",
-    # Add all 30 RSS feeds here...
-]
+# Define constants
+KEYWORDS = ["AI", "artificial intelligence", "machine learning", "deep learning", "Python"]
+EXCLUDED_SOURCES = ["https://blavity.com/rss"]
+RSS_FEEDS = {
+    "The New York Times": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "The Atlantic": "https://www.theatlantic.com/feed/all/",
+    "Blavity": "https://blavity.com/rss",
+    "The Root": "https://www.theroot.com/rss",
+    "Black Enterprise": "https://www.blackenterprise.com/feed/",
+    "NPR": "https://www.npr.org/rss/rss.php?id=1001",
+    "Reuters": "https://feeds.reuters.com/reuters/topNews",
+    "CNET": "https://www.cnet.com/rss/news/",
+    "Wired": "https://www.wired.com/feed/rss",
+    "The Verge": "https://www.theverge.com/rss/index.xml",
+    "TechCrunch": "https://techcrunch.com/feed/",
+    "Mashable": "https://mashable.com/feeds/rss/all",
+    "BBC News": "https://www.bbc.co.uk/news/rss.xml",
+    "The Guardian": "https://www.theguardian.com/world/rss",
+    "USA Today": "https://www.usatoday.com/rss/news/"
+}
 
-KEYWORDS = [
-    "Black culture", "artificial intelligence", "climate change", "elections", "HBCUs",
-    "Afrofuturism", "police reform", "global economy", "Black Lives Matter", "education reform",
-    "healthcare access", "generational wealth", "blockchain", "sports culture", "machine learning",
-    "racial justice", "cybersecurity", "poverty", "inequality"
-    # Add the full 97 keywords here
-]
+OUTPUT_FILE = f"news_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+SEEN_ARTICLES = set()  # To track seen articles
+MINIMUM_ARTICLES = 100  # Ensure at least 100 articles per run
 
-# -----------------------------
-# Utility Functions
-# -----------------------------
-
-def log_message(message):
-    """Log a message to the log file with a timestamp."""
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOG_FILE, "a") as log_file:
-        log_file.write(f"[{timestamp}] {message}\n")
-    print(f"[{timestamp}] {message}")
-
-def fetch_articles_from_feed(feed_url):
-    """Fetch articles from an RSS feed."""
-    articles = []
+# Helper function to fetch and parse RSS feeds
+def fetch_feed(url):
     try:
-        feed = feedparser.parse(feed_url)
-        for entry in feed.entries:
-            articles.append({
-                "title": entry.get("title", "No Title"),
-                "link": entry.get("link", "No Link"),
-                "source": feed.feed.get("title", "Unknown Source"),
-                "summary": entry.get("summary", "")
-            })
-        log_message(f"Fetched {len(articles)} articles from {feed_url}")
+        feed = feedparser.parse(url)
+        if feed.bozo:
+            logging.warning(f"Failed to parse feed: {url}")
+            return []
+        return feed.entries
     except Exception as e:
-        log_message(f"Error fetching from {feed_url}: {e}")
-    return articles
+        logging.error(f"Error fetching feed {url}: {e}")
+        return []
 
-def download_full_content(article):
-    """Download and extract full content from an article link."""
-    url = article["link"]
+# Helper function to handle requests gracefully
+def safe_request(url):
     try:
-        news_article = Article(url)
-        news_article.download()
-        news_article.parse()
-        return news_article.text
-    except Exception as e:
-        log_message(f"Failed to download content for {url}: {e}")
-        return ""
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        return response.content
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Failed to download content from {url}: {e}")
+        return None
 
+# Ensure at least one article from each source
+def ensure_one_article_per_source(all_articles):
+    unique_articles = []
+    sources_seen = set()
+
+    for article in all_articles:
+        source_name = article.get("source_name")
+        if source_name not in sources_seen:
+            unique_articles.append(article)
+            sources_seen.add(source_name)
+
+    return unique_articles
+
+# Filter articles based on keywords
 def filter_articles_by_keywords(articles, keywords):
-    """Filter articles containing any of the keywords in title, summary, or full content."""
     filtered = []
     for article in articles:
         title = article.get("title", "").lower()
-        summary = article.get("summary", "").lower()
-        content = article.get("content", "").lower()  # Full content
-        
-        if any(keyword.lower() in title or keyword.lower() in summary or keyword.lower() in content for keyword in keywords):
+        description = article.get("summary", "").lower()  # Use "summary" for description
+        if any(keyword.lower() in (title + description) for keyword in keywords):
             filtered.append(article)
     return filtered
 
-def save_articles_to_csv(articles, filename):
-    """Save articles to CSV with only title, link, and source."""
-    if not articles:
-        log_message("No articles to save.")
-        return
-
-    df = pd.DataFrame(articles)[["title", "link", "source"]]
-    df["link"] = df["link"].apply(lambda x: f'=HYPERLINK("{x}", "Link")')
-    df.to_csv(filename, index=False)
-    log_message(f"Saved {len(df)} articles to {filename}")
-
-# -----------------------------
-# Main Execution
-# -----------------------------
-
-def main():
-    log_message("News Sentinel script started.")
-    all_articles = []
-
-    # Step 1: Fetch articles from all feeds
-    for feed_url in RSS_FEEDS:
-        articles = fetch_articles_from_feed(feed_url)
-        
-        # Download full content for each article
+# Save articles to CSV
+def save_to_csv(articles, filename):
+    with open(filename, mode="w", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        writer.writerow(["title", "link", "source"])
         for article in articles:
-            article["content"] = download_full_content(article)
-        
-        all_articles.extend(articles)
+            writer.writerow([
+                article.get("title"),
+                f'=HYPERLINK("{article.get("link")}")',
+                article.get("source_name")
+            ])
 
-    log_message(f"Total articles fetched: {len(all_articles)}")
+# Automate Git tracking and pushing
+def git_automate():
+    commit_message = f"Automated update: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    try:
+        repo_path = os.getcwd()  # Assume the script is run from the repository root
+        subprocess.run(["git", "add", "--all"], check=True, cwd=repo_path)
+        subprocess.run(["git", "commit", "-m", commit_message], check=True, cwd=repo_path)
+        subprocess.run(["git", "push", "origin", "master"], check=True, cwd=repo_path)
+        logging.info("Changes have been successfully pushed to the repository.")
+    except subprocess.CalledProcessError as e:
+        logging.error(f"An error occurred while pushing changes to GitHub: {e}")
 
-    # Step 2: Filter articles based on keywords
-    filtered_articles = filter_articles_by_keywords(all_articles, KEYWORDS)
-    log_message(f"Total articles matching keywords: {len(filtered_articles)}")
+# Main script
+def main():
+    logging.info("News Sentinel script started.")
 
-    # Step 3: Save to CSV
-    save_articles_to_csv(filtered_articles, OUTPUT_FILE)
+    all_articles = []
+    for source_name, feed_url in RSS_FEEDS.items():
+        if feed_url in EXCLUDED_SOURCES:
+            logging.info(f"Skipping excluded source: {feed_url}")
+            continue
 
-    log_message("News Sentinel script completed successfully.")
+        logging.info(f"Fetching articles from {source_name}")
+        entries = fetch_feed(feed_url)
+
+        for entry in entries:
+            article_id = entry.get("link", "")  # Use link as a unique identifier
+            if article_id not in SEEN_ARTICLES:
+                all_articles.append({
+                    "title": entry.get("title", ""),
+                    "link": entry.get("link", ""),
+                    "source_name": source_name,
+                    "summary": entry.get("summary", "")
+                })
+                SEEN_ARTICLES.add(article_id)
+
+    logging.info(f"Total articles fetched: {len(all_articles)}")
+
+    # Ensure at least one article per source
+    unique_articles = ensure_one_article_per_source(all_articles)
+    logging.info(f"Total unique articles by source: {len(unique_articles)}")
+
+    # Apply keyword filtering
+    filtered_articles = filter_articles_by_keywords(unique_articles, KEYWORDS)
+    logging.info(f"Total articles matching keywords: {len(filtered_articles)}")
+
+    # Ensure at least MINIMUM_ARTICLES are saved
+    if len(filtered_articles) < MINIMUM_ARTICLES:
+        additional_articles = [article for article in unique_articles if article not in filtered_articles]
+        filtered_articles.extend(additional_articles[:MINIMUM_ARTICLES - len(filtered_articles)])
+        logging.info(f"Added {len(additional_articles[:MINIMUM_ARTICLES - len(filtered_articles)])} non-matching articles to meet minimum quota of {MINIMUM_ARTICLES}.")
+
+    # Save to CSV
+    save_to_csv(filtered_articles, OUTPUT_FILE)
+    logging.info(f"Saved {len(filtered_articles)} articles to {OUTPUT_FILE}")
+
+    # Automate Git push
+    git_automate()
+
+    logging.info("News Sentinel script completed successfully.")
 
 if __name__ == "__main__":
     main()
