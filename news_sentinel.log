@@ -185,3 +185,20 @@
 [2024-12-18 10:01:16] Saved 100 articles to news_20241218_100106.csv
 [2024-12-18 10:01:42] Changes have been successfully pushed to the repository.
 [2024-12-18 10:01:42] News Sentinel script completed successfully.
+[2024-12-18 10:27:38] News Sentinel script started.
+[2024-12-18 10:27:38] Fetching articles from The New York Times
+[2024-12-18 10:27:38] Fetching articles from The Atlantic
+[2024-12-18 10:27:39] Fetching articles from Reuters
+[2024-12-18 10:27:39] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
+[2024-12-18 10:27:39] Failed to fetch from Reuters. Using fallback.
+[2024-12-18 10:27:40] Failed to fetch articles from NewsAPI: 401 Client Error: Unauthorized for url: https://newsapi.org/v2/everything?q=AI+OR+artificial+intelligence+OR+machine+learning+OR+deep+learning+OR+Python&apiKey=your_actual_news_api_key&pageSize=30
+[2024-12-18 10:27:40] Fetching articles from NPR
+[2024-12-18 10:27:40] Fetching articles from CNET
+[2024-12-18 10:27:40] Fetching articles from Wired
+[2024-12-18 10:27:40] Total articles fetched: 134
+[2024-12-18 10:27:40] Total unique articles by source: 5
+[2024-12-18 10:27:40] Total articles matching keywords: 3
+[2024-12-18 10:27:40] Added 2 non-matching articles to meet minimum quota of 100.
+[2024-12-18 10:27:40] Saved 5 articles to news_20241218_102738.csv
+[2024-12-18 10:27:48] Changes have been successfully pushed to the repository.
+[2024-12-18 10:27:48] News Sentinel script completed successfully.
