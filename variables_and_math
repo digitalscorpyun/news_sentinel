@@ -1,0 +1,16 @@
+# Defining variables
+name = "DigitalScorpyun"
+age = 51
+favorite_number = 25
+
+# Printing variables
+print(f"My name is {name}.")
+print(f"I am {age} years old.")
+print(f"My favorite number is {favorite_number}.")
+
+# Performing math operations
+product = age * favorite_number
+print(f"The product of my age and favorite number is {product}.")
+
+quotient = age / favorite_number
+print(f"The quotient when my age is divided by my favorite number is {quotient}.")
