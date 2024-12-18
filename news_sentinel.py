@@ -62,15 +62,17 @@ def safe_request(url):
         return None
 
 # Ensure at least one article from each source
-def ensure_one_article_per_source(all_articles):
+def ensure_one_article_per_source(all_articles, sources):
     unique_articles = []
     sources_seen = set()
 
-    for article in all_articles:
-        source_name = article.get("source_name")
-        if source_name not in sources_seen:
-            unique_articles.append(article)
+    for source_name in sources:
+        source_articles = [article for article in all_articles if article.get("source_name") == source_name]
+        if source_articles:
+            unique_articles.append(source_articles[0])  # Select the first article from this source
             sources_seen.add(source_name)
+        else:
+            logging.warning(f"No articles found for source: {source_name}")
 
     return unique_articles
 
@@ -135,7 +137,7 @@ def main():
     logging.info(f"Total articles fetched: {len(all_articles)}")
 
     # Ensure at least one article per source
-    unique_articles = ensure_one_article_per_source(all_articles)
+    unique_articles = ensure_one_article_per_source(all_articles, RSS_FEEDS.keys())
     logging.info(f"Total unique articles by source: {len(unique_articles)}")
 
     # Apply keyword filtering
@@ -143,11 +145,11 @@ def main():
     logging.info(f"Total articles matching keywords: {len(filtered_articles)}")
 
     # Ensure at least MINIMUM_ARTICLES are saved
-    additional_articles_needed = max(0, MINIMUM_ARTICLES - len(filtered_articles))
-    if additional_articles_needed > 0:
-        additional_articles = [article for article in unique_articles if article not in filtered_articles]
-        filtered_articles.extend(additional_articles[:additional_articles_needed])
-        logging.info(f"Added {len(additional_articles[:additional_articles_needed])} non-matching articles to meet minimum quota of {MINIMUM_ARTICLES}.")
+    if len(filtered_articles) < MINIMUM_ARTICLES:
+        remaining_articles = [article for article in all_articles if article not in filtered_articles]
+        while len(filtered_articles) < MINIMUM_ARTICLES and remaining_articles:
+            filtered_articles.append(remaining_articles.pop(0))
+        logging.info(f"Added additional articles to meet minimum quota of {MINIMUM_ARTICLES}.")
 
     # Save to CSV
     save_to_csv(filtered_articles, OUTPUT_FILE)

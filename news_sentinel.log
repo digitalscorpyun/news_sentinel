@@ -1,16 +1,2 @@
-[2024-12-18 00:22:25] News Sentinel script started.
-[2024-12-18 00:22:25] Fetching articles from The New York Times
-[2024-12-18 00:22:26] Fetching articles from The Atlantic
-[2024-12-18 00:22:28] Skipping excluded source: https://blavity.com/rss
-[2024-12-18 00:22:28] Fetching articles from The Root
-[2024-12-18 00:22:31] Fetching articles from Black Enterprise
-[2024-12-18 00:22:32] Fetching articles from NPR
-[2024-12-18 00:22:32] Fetching articles from Reuters
-[2024-12-18 00:22:33] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 00:22:33] Fetching articles from CNET
-[2024-12-18 00:22:33] Fetching articles from Wired
-[2024-12-18 00:22:34] Fetching articles from The Verge
-[2024-12-18 00:22:35] Fetching articles from TechCrunch
-[2024-12-18 00:22:36] Fetching articles from Mashable
-[2024-12-18 00:22:40] Fetching articles from BBC News
-[2024-12-18 00:22:41] Fetching articles from The Guardian
+[2024-12-18 00:27:13] News Sentinel script started.
+[2024-12-18 00:27:13] Fetching articles from The New York Times
