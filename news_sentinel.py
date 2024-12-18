@@ -1,3 +1,7 @@
+import sys
+from patched_imghdr import what
+sys.modules['imghdr'] = sys.modules[__name__]
+
 import requests
 import feedparser
 import csv
@@ -8,6 +12,8 @@ import subprocess
 import argparse
 from collections import defaultdict
 from nltk.stem import PorterStemmer
+from bs4 import BeautifulSoup
+import tweepy
 
 # Configure logging dynamically
 parser = argparse.ArgumentParser()
@@ -47,6 +53,18 @@ RSS_FEEDS = {
     "USA Today": "https://www.usatoday.com/rss/news/"
 }
 
+SCRAPING_SITES = {
+    "Example News": "https://example.com/news"
+}
+
+# API Keys for external integrations
+NEWS_API_KEY = "your_news_api_key"
+NEWS_API_URL = "https://newsapi.org/v2/everything"
+TWITTER_API_KEY = "your_twitter_api_key"
+TWITTER_API_SECRET = "your_twitter_api_secret"
+TWITTER_ACCESS_TOKEN = "your_access_token"
+TWITTER_ACCESS_SECRET = "your_access_secret"
+
 OUTPUT_FILE = f"news_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
 SEEN_ARTICLES = set()  # To track seen articles
 MINIMUM_ARTICLES = 100  # Ensure at least 100 articles per run
@@ -73,6 +91,72 @@ def fetch_feed_with_retry(url, retries=3):
             return articles
         logging.warning(f"Retrying feed: {url} (Attempt {attempt + 1}/{retries})")
     return []
+
+# Fetch articles from NewsAPI
+def fetch_newsapi_articles(keywords):
+    try:
+        articles = []
+        for keyword in keywords:
+            params = {
+                "q": keyword,
+                "apiKey": NEWS_API_KEY,
+                "pageSize": 20  # Fetch up to 20 articles per keyword
+            }
+            response = requests.get(NEWS_API_URL, params=params, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+
+            for article in data.get("articles", []):
+                articles.append({
+                    "title": article["title"],
+                    "link": article["url"],
+                    "source_name": article["source"]["name"],
+                    "summary": article.get("description", "")
+                })
+        return articles
+    except Exception as e:
+        logging.error(f"Failed to fetch from NewsAPI: {e}")
+        return []
+
+# Authenticate with Twitter API
+def authenticate_twitter():
+    auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_SECRET)
+    auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET)
+    return tweepy.API(auth)
+
+# Fetch tweets based on keywords
+def fetch_twitter_articles(keywords, api):
+    try:
+        articles = []
+        for keyword in keywords:
+            for tweet in tweepy.Cursor(api.search_tweets, q=keyword, lang="en").items(10):  # Fetch up to 10 tweets per keyword
+                articles.append({
+                    "title": tweet.text[:50] + "...",  # Use the first 50 characters as title
+                    "link": f"https://twitter.com/i/web/status/{tweet.id}",
+                    "source_name": "Twitter",
+                    "summary": tweet.text
+                })
+        return articles
+    except Exception as e:
+        logging.error(f"Failed to fetch tweets: {e}")
+        return []
+
+# Scrape articles from websites
+def scrape_site(url):
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, "html.parser")
+
+        articles = []
+        for article in soup.find_all("div", class_="article-class"):  # Update class based on the website structure
+            title = article.find("h2").text
+            link = article.find("a")["href"]
+            articles.append({"title": title, "link": link, "source_name": url})
+        return articles
+    except Exception as e:
+        logging.error(f"Failed to scrape {url}: {e}")
+        return []
 
 # Ensure at least one article from each source
 def ensure_one_article_per_source(all_articles, sources):
@@ -132,8 +216,9 @@ def git_automate():
 # Main script
 def main():
     logging.info("News Sentinel script started.")
-
     all_articles = []
+
+    # Fetch from RSS feeds
     for source_name, feed_url in RSS_FEEDS.items():
         if feed_url in EXCLUDED_SOURCES:
             logging.info(f"Skipping excluded source: {feed_url}")
@@ -152,6 +237,23 @@ def main():
                     "summary": entry.get("summary", "")
                 })
                 SEEN_ARTICLES.add(article_id)
+
+    # Scrape websites
+    for source_name, site_url in SCRAPING_SITES.items():
+        logging.info(f"Scraping articles from {source_name}")
+        articles = scrape_site(site_url)
+        all_articles.extend(articles)
+
+    # Fetch from NewsAPI
+    logging.info("Fetching articles from NewsAPI")
+    newsapi_articles = fetch_newsapi_articles(KEYWORDS)
+    all_articles.extend(newsapi_articles)
+
+    # Fetch from Twitter
+    logging.info("Fetching articles from Twitter")
+    twitter_api = authenticate_twitter()
+    twitter_articles = fetch_twitter_articles(KEYWORDS, twitter_api)
+    all_articles.extend(twitter_articles)
 
     logging.info(f"Total articles fetched: {len(all_articles)}")
 
