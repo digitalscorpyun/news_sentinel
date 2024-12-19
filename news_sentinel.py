@@ -47,7 +47,7 @@ logging.getLogger().addHandler(console_handler)
 
 def initialize_webdriver():
     """Initialize Selenium WebDriver."""
-    chrome_service = Service("E:/Python Basics/chromedriver/chromedriver.exe")
+    chrome_service = Service(r"E:\Python Basics\chromedriver\chromedriver-win64\chromedriver.exe")
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-gpu")

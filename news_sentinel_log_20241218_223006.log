@@ -1,0 +1,11 @@
+[2024-12-18 22:30:06] INFO: News Sentinel started.
+[2024-12-18 22:30:06] INFO: Fetching articles from The New York Times
+[2024-12-18 22:30:06] INFO: Fetching articles from BBC News
+[2024-12-18 22:30:07] INFO: Fetching articles from TechCrunch
+[2024-12-18 22:30:07] INFO: Fetching articles from Popular Science
+[2024-12-18 22:30:08] INFO: Fetching articles from MIT Technology Review
+[2024-12-18 22:30:09] INFO: Scraping articles from Reuters
+[2024-12-18 22:30:21] INFO: Scraping articles from The Guardian
+[2024-12-18 22:31:17] INFO: Scraping articles from Blavity
+[2024-12-18 22:31:29] INFO: Scraping articles from Black Enterprise
+[2024-12-18 22:33:32] ERROR: Selenium scraping error for https://www.blackenterprise.com: HTTPConnectionPool(host='localhost', port=54422): Read timed out. (read timeout=120)
