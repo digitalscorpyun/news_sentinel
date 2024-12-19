@@ -1,0 +1,15 @@
+[2024-12-19 06:47:03] INFO: News Sentinel started.
+[2024-12-19 06:47:03] INFO: Fetching articles from The New York Times
+[2024-12-19 06:47:04] INFO: Fetching articles from BBC News
+[2024-12-19 06:47:04] INFO: Fetching articles from TechCrunch
+[2024-12-19 06:47:05] INFO: Fetching articles from Blavity
+[2024-12-19 06:47:06] INFO: Fetching articles from Black Enterprise
+[2024-12-19 06:47:08] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.blackenterprise.com/feed/
+[2024-12-19 06:47:08] WARNING: No articles fetched from Black Enterprise
+[2024-12-19 06:47:08] INFO: Scraping articles from The Guardian
+[2024-12-19 06:48:32] INFO: Scraping articles from Semafor
+[2024-12-19 06:48:58] INFO: Scraping articles from The Grio
+[2024-12-19 06:49:22] INFO: Scraping articles from Reuters
+[2024-12-19 06:49:32] INFO: Scraping articles from Popular Science
+[2024-12-19 06:50:45] INFO: Scraping articles from MIT Technology Review
+[2024-12-19 06:51:27] INFO: Scraping articles from Vibe

@@ -1,7 +1,20 @@
-[2024-12-18 22:16:32] INFO: News Sentinel started.
-[2024-12-18 22:16:32] INFO: Fetching articles from The New York Times
-[2024-12-18 22:16:33] INFO: Fetching articles from BBC News
-[2024-12-18 22:16:33] INFO: Fetching articles from TechCrunch
-[2024-12-18 22:16:34] INFO: Fetching articles from Popular Science
-[2024-12-18 22:16:39] INFO: Fetching articles from MIT Technology Review
-[2024-12-18 22:16:41] INFO: Scraping articles from Reuters
+{
+    "NEWS_API_KEY": "f01cc9c0670a4a7bb5bd1a0aa1c01ae8",
+    "RSS_FEEDS": {
+        "The New York Times": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+        "BBC News": "https://www.bbc.co.uk/news/rss.xml",
+        "TechCrunch": "https://techcrunch.com/feed/",
+        "Blavity": "https://blavity.com/rss",
+        "Black Enterprise": "https://www.blackenterprise.com/feed/"
+    },
+    "WEBSITES": {
+        "The Guardian": "https://www.theguardian.com",
+        "Semafor": "https://www.semafor.com",
+        "The Grio": "https://thegrio.com"
+    },
+    "KEYWORDS": [
+        "AI", "artificial intelligence", "machine learning", "deep learning",
+        "data science", "technology", "innovation", "automation",
+        "robotics", "virtual reality", "augmented reality", "quantum computing",
+        "cybersecurity", "blockcha
+

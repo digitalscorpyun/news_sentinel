@@ -9,3 +9,36 @@
 [2024-12-18 22:31:17] INFO: Scraping articles from Blavity
 [2024-12-18 22:31:29] INFO: Scraping articles from Black Enterprise
 [2024-12-18 22:33:32] ERROR: Selenium scraping error for https://www.blackenterprise.com: HTTPConnectionPool(host='localhost', port=54422): Read timed out. (read timeout=120)
+[2024-12-18 22:35:33] WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=54422): Read timed out. (read timeout=120)")': /session/4f7e1ef93b0f39d06464297b4c0102d7
+[2024-12-18 22:37:39] WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=54422): Read timed out. (read timeout=120)")': /session/4f7e1ef93b0f39d06464297b4c0102d7
+[2024-12-18 22:39:40] WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=54422): Read timed out. (read timeout=120)")': /session/4f7e1ef93b0f39d06464297b4c0102d7
+[2024-12-18 22:42:54] ERROR: Service process refused to terminate gracefully with SIGTERM, escalating to SIGKILL.
+Traceback (most recent call last):
+  File "E:\Python Basics\venv\Lib\site-packages\selenium\webdriver\common\service.py", line 178, in _terminate_process
+    self.process.wait(60)
+    ~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\miker\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1274, in wait
+    return self._wait(timeout=timeout)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\miker\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1603, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['E:\\Python Basics\\chromedriver\\chromedriver-win64\\chromedriver.exe', '--port=54422']' timed out after 60 seconds
+[2024-12-18 22:42:54] INFO: Scraping articles from Nature
+[2024-12-18 22:44:51] INFO: Scraping articles from Complex
+[2024-12-18 22:50:10] INFO: Scraping articles from Vibe
+[2024-12-18 22:52:30] ERROR: Selenium scraping error for https://www.vibe.com: HTTPConnectionPool(host='localhost', port=57374): Read timed out. (read timeout=120)
+[2024-12-18 22:54:30] WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=57374): Read timed out. (read timeout=120)")': /session/b0ef6f5afac4b88bcae3b0c1d2c3c4fd
+[2024-12-18 22:55:59] INFO: Scraping articles from OkayAfrica
+[2024-12-18 22:57:57] INFO: Scraping articles from Semafor
+[2024-12-18 23:01:19] ERROR: Service process refused to terminate gracefully with SIGTERM, escalating to SIGKILL.
+Traceback (most recent call last):
+  File "E:\Python Basics\venv\Lib\site-packages\selenium\webdriver\common\service.py", line 178, in _terminate_process
+    self.process.wait(60)
+    ~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\miker\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1274, in wait
+    return self._wait(timeout=timeout)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\miker\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1603, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['E:\\Python Basics\\chromedriver\\chromedriver-win64\\chromedriver.exe', '--port=58859']' timed out after 60 seconds
+[2024-12-18 23:01:21] INFO: Saved 165 articles to news_20241218_223006.csv
