@@ -1,0 +1,44 @@
+{
+    "NEWS_API_KEY": "f01cc9c0670a4a7bb5bd1a0aa1c01ae8",
+    "RSS_FEEDS": {
+        "The New York Times": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+        "BBC News": "https://www.bbc.co.uk/news/rss.xml",
+        "TechCrunch": "https://techcrunch.com/feed/",
+        "Reuters": "https://www.reuters.com",
+        "The Guardian": "https://www.theguardian.com",
+        "Blavity": "https://blavity.com",
+        "Black Enterprise": "https://www.blackenterprise.com",
+        "MIT Technology Review": "https://www.technologyreview.com",
+        "Popular Science": "https://www.popsci.com",
+        "Nature": "https://www.nature.com",
+        "Complex": "https://www.complex.com",
+        "Vibe": "https://www.vibe.com",
+        "OkayAfrica": "https://www.okayafrica.com",
+        "Semafor": "https://www.semafor.com"
+    },
+    "WEBSITES": {
+        "The New York Times": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+        "BBC News": "https://www.bbc.co.uk/news/rss.xml",
+        "TechCrunch": "https://techcrunch.com/feed/",
+        "Reuters": "https://www.reuters.com",
+        "The Guardian": "https://www.theguardian.com",
+        "Blavity": "https://blavity.com",
+        "Black Enterprise": "https://www.blackenterprise.com",
+        "MIT Technology Review": "https://www.technologyreview.com",
+        "Popular Science": "https://www.popsci.com",
+        "Nature": "https://www.nature.com",
+        "Complex": "https://www.complex.com",
+        "Vibe": "https://www.vibe.com",
+        "OkayAfrica": "https://www.okayafrica.com",
+        "Semafor": "https://www.semafor.com"
+    },
+    "KEYWORDS": [
+        "AI", "machine learning", "natural language processing", "deep learning",
+        "explainable AI", "AI ethics", "data science", "blockchain", "automation",
+        "cybersecurity", "augmented reality", "metaverse", "digital transformation",
+        "edge computing", "climate tech", "Afrofuturism", "African diaspora",
+        "Black creators in AI", "AI for social justice", "inclusive AI",
+        "AI in education", "AI for good", "AI in governance", "global AI strategies",
+        "racial bias in AI", "Africana", "Africana studies"
+    ]
+}

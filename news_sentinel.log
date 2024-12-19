@@ -1,204 +1,38 @@
-[2024-12-18 00:27:13] News Sentinel script started.
-[2024-12-18 00:27:13] Fetching articles from The New York Times
-[2024-12-18 00:27:13] Fetching articles from The Atlantic
-[2024-12-18 00:27:16] Skipping excluded source: https://blavity.com/rss
-[2024-12-18 00:27:16] Fetching articles from The Root
-[2024-12-18 00:27:16] Fetching articles from Black Enterprise
-[2024-12-18 00:27:18] Fetching articles from NPR
-[2024-12-18 00:27:19] Fetching articles from Reuters
-[2024-12-18 00:27:19] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 00:27:19] Fetching articles from CNET
-[2024-12-18 00:27:19] Fetching articles from Wired
-[2024-12-18 00:27:19] Fetching articles from The Verge
-[2024-12-18 00:27:20] Fetching articles from TechCrunch
-[2024-12-18 00:27:20] Fetching articles from Mashable
-[2024-12-18 00:27:22] Fetching articles from BBC News
-[2024-12-18 00:27:22] Fetching articles from The Guardian
-[2024-12-18 00:27:22] Fetching articles from USA Today
-[2024-12-18 00:27:23] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 00:27:23] Total articles fetched: 410
-[2024-12-18 00:27:23] No articles found for source: Blavity
-[2024-12-18 00:27:23] No articles found for source: Reuters
-[2024-12-18 00:27:23] No articles found for source: USA Today
-[2024-12-18 00:27:23] Total unique articles by source: 12
-[2024-12-18 00:27:23] Total articles matching keywords: 5
-[2024-12-18 00:27:23] Added additional articles to meet minimum quota of 100.
-[2024-12-18 00:27:23] Saved 100 articles to news_20241218_002713.csv
-[2024-12-18 00:27:28] Changes have been successfully pushed to the repository.
-[2024-12-18 00:27:28] News Sentinel script completed successfully.
-[2024-12-18 01:44:14] News Sentinel script started.
-[2024-12-18 01:44:14] Fetching articles from The New York Times
-[2024-12-18 01:44:14] Fetching articles from The Atlantic
-[2024-12-18 01:44:14] Skipping excluded source: https://blavity.com/rss
-[2024-12-18 01:44:14] Fetching articles from The Root
-[2024-12-18 01:44:15] Fetching articles from Black Enterprise
-[2024-12-18 01:44:16] Fetching articles from NPR
-[2024-12-18 01:44:16] Fetching articles from Reuters
-[2024-12-18 01:44:16] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 01:44:16] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 1/3)
-[2024-12-18 01:44:16] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 01:44:16] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 2/3)
-[2024-12-18 01:44:17] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 01:44:17] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 3/3)
-[2024-12-18 01:44:17] Fetching articles from CNET
-[2024-12-18 01:44:17] Fetching articles from Wired
-[2024-12-18 01:44:17] Fetching articles from The Verge
-[2024-12-18 01:44:17] Fetching articles from TechCrunch
-[2024-12-18 01:44:17] Fetching articles from Mashable
-[2024-12-18 01:44:18] Fetching articles from BBC News
-[2024-12-18 01:44:19] Fetching articles from The Guardian
-[2024-12-18 01:44:19] Fetching articles from USA Today
-[2024-12-18 01:44:20] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 01:44:20] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 1/3)
-[2024-12-18 01:44:21] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 01:44:21] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 2/3)
-[2024-12-18 01:44:21] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 01:44:21] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 3/3)
-[2024-12-18 01:44:21] Total articles fetched: 408
-[2024-12-18 01:44:21] No articles found for source: Blavity
-[2024-12-18 01:44:21] No articles found for source: Reuters
-[2024-12-18 01:44:21] No articles found for source: USA Today
-[2024-12-18 01:44:21] Total unique articles by source: 12
-[2024-12-18 01:44:21] Total articles matching keywords: 5
-[2024-12-18 01:44:21] Added additional articles to meet minimum quota of 100.
-[2024-12-18 01:44:21] Saved 100 articles to news_20241218_014414.csv
-[2024-12-18 01:44:26] Changes have been successfully pushed to the repository.
-[2024-12-18 01:44:26] News Sentinel script completed successfully.
-[2024-12-18 02:26:19] News Sentinel script started.
-[2024-12-18 02:26:19] Fetching articles from The New York Times
-[2024-12-18 02:26:20] Fetching articles from The Atlantic
-[2024-12-18 02:26:20] Skipping excluded source: https://blavity.com/rss
-[2024-12-18 02:26:20] Fetching articles from Black Enterprise
-[2024-12-18 02:26:21] Fetching articles from NPR
-[2024-12-18 02:26:21] Fetching articles from Reuters
-[2024-12-18 02:26:21] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 02:26:21] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 1/3)
-[2024-12-18 02:26:22] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 02:26:22] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 2/3)
-[2024-12-18 02:26:22] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 02:26:22] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 3/3)
-[2024-12-18 02:26:22] Fetching articles from CNET
-[2024-12-18 02:26:22] Fetching articles from Wired
-[2024-12-18 02:26:22] Fetching articles from The Verge
-[2024-12-18 02:26:22] Fetching articles from TechCrunch
-[2024-12-18 02:26:23] Fetching articles from Mashable
-[2024-12-18 02:26:24] Fetching articles from BBC News
-[2024-12-18 02:26:24] Fetching articles from The Guardian
-[2024-12-18 02:26:24] Fetching articles from USA Today
-[2024-12-18 02:26:25] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 02:26:25] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 1/3)
-[2024-12-18 02:26:26] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 02:26:26] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 2/3)
-[2024-12-18 02:26:26] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 02:26:26] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 3/3)
-[2024-12-18 02:26:26] Total articles fetched: 358
-[2024-12-18 02:26:26] No articles found for source: Blavity
-[2024-12-18 02:26:26] No articles found for source: Reuters
-[2024-12-18 02:26:26] No articles found for source: USA Today
-[2024-12-18 02:26:26] Total unique articles by source: 11
-[2024-12-18 02:26:26] Total articles matching keywords: 5
-[2024-12-18 02:26:26] Added additional articles to meet minimum quota of 100.
-[2024-12-18 02:26:26] Saved 100 articles to news_20241218_022619.csv
-[2024-12-18 02:26:31] Changes have been successfully pushed to the repository.
-[2024-12-18 02:26:31] News Sentinel script completed successfully.
-[2024-12-18 03:19:00] News Sentinel script started.
-[2024-12-18 03:19:00] Fetching articles from The New York Times
-[2024-12-18 03:19:00] Fetching articles from The Atlantic
-[2024-12-18 03:19:03] Fetching articles from Black Enterprise
-[2024-12-18 03:19:04] Fetching articles from NPR
-[2024-12-18 03:19:04] Fetching articles from Reuters
-[2024-12-18 03:19:05] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 03:19:05] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 1/3)
-[2024-12-18 03:19:05] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 03:19:05] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 2/3)
-[2024-12-18 03:19:05] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 03:19:05] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 3/3)
-[2024-12-18 03:19:05] Fetching articles from CNET
-[2024-12-18 03:19:05] Fetching articles from Wired
-[2024-12-18 03:19:06] Fetching articles from The Verge
-[2024-12-18 03:19:06] Fetching articles from TechCrunch
-[2024-12-18 03:19:07] Fetching articles from Mashable
-[2024-12-18 03:19:08] Fetching articles from BBC News
-[2024-12-18 03:19:09] Fetching articles from The Guardian
-[2024-12-18 03:19:10] Fetching articles from USA Today
-[2024-12-18 03:19:10] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 03:19:10] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 1/3)
-[2024-12-18 03:19:11] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 03:19:11] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 2/3)
-[2024-12-18 03:19:11] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 03:19:11] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 3/3)
-[2024-12-18 03:19:11] Total articles fetched: 359
-[2024-12-18 03:19:11] No articles found for source: Reuters
-[2024-12-18 03:19:11] No articles found for source: USA Today
-[2024-12-18 03:19:11] Total unique articles by source: 11
-[2024-12-18 03:19:11] Total articles matching keywords: 0
-[2024-12-18 03:19:11] Added additional articles to meet minimum quota of 100.
-[2024-12-18 03:19:11] Saved 100 articles to news_20241218_031900.csv
-[2024-12-18 03:19:15] Changes have been successfully pushed to the repository.
-[2024-12-18 03:19:15] News Sentinel script completed successfully.
-[2024-12-18 10:01:06] News Sentinel script started.
-[2024-12-18 10:01:06] Fetching articles from The New York Times
-[2024-12-18 10:01:06] Fetching articles from The Atlantic
-[2024-12-18 10:01:06] Fetching articles from Black Enterprise
-[2024-12-18 10:01:07] Failed to parse feed: https://www.blackenterprise.com/feed/
-[2024-12-18 10:01:07] Retrying feed: https://www.blackenterprise.com/feed/ (Attempt 1/3)
-[2024-12-18 10:01:08] Failed to parse feed: https://www.blackenterprise.com/feed/
-[2024-12-18 10:01:08] Retrying feed: https://www.blackenterprise.com/feed/ (Attempt 2/3)
-[2024-12-18 10:01:09] Failed to parse feed: https://www.blackenterprise.com/feed/
-[2024-12-18 10:01:09] Retrying feed: https://www.blackenterprise.com/feed/ (Attempt 3/3)
-[2024-12-18 10:01:09] Fetching articles from NPR
-[2024-12-18 10:01:09] Fetching articles from Reuters
-[2024-12-18 10:01:09] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 10:01:09] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 1/3)
-[2024-12-18 10:01:09] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 10:01:09] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 2/3)
-[2024-12-18 10:01:09] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 10:01:09] Retrying feed: https://feeds.reuters.com/reuters/topNews (Attempt 3/3)
-[2024-12-18 10:01:09] Fetching articles from CNET
-[2024-12-18 10:01:10] Fetching articles from Wired
-[2024-12-18 10:01:10] Fetching articles from The Verge
-[2024-12-18 10:01:10] Fetching articles from TechCrunch
-[2024-12-18 10:01:10] Fetching articles from Mashable
-[2024-12-18 10:01:11] Fetching articles from BBC News
-[2024-12-18 10:01:13] Fetching articles from The Guardian
-[2024-12-18 10:01:14] Fetching articles from USA Today
-[2024-12-18 10:01:14] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 10:01:14] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 1/3)
-[2024-12-18 10:01:15] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 10:01:15] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 2/3)
-[2024-12-18 10:01:15] Failed to parse feed: https://www.usatoday.com/rss/news/
-[2024-12-18 10:01:15] Retrying feed: https://www.usatoday.com/rss/news/ (Attempt 3/3)
-[2024-12-18 10:01:15] Scraping articles from Example News
-[2024-12-18 10:01:15] Failed to scrape https://example.com/news: 404 Client Error: Not Found for url: https://example.com/news
-[2024-12-18 10:01:15] Fetching articles from NewsAPI
-[2024-12-18 10:01:16] Failed to fetch from NewsAPI: 401 Client Error: Unauthorized for url: https://newsapi.org/v2/everything?q=AI&apiKey=your_news_api_key&pageSize=20
-[2024-12-18 10:01:16] Fetching articles from Twitter
-[2024-12-18 10:01:16] Failed to fetch tweets: 401 Unauthorized
-89 - Invalid or expired token.
-[2024-12-18 10:01:16] Total articles fetched: 349
-[2024-12-18 10:01:16] No articles found for source: Black Enterprise
-[2024-12-18 10:01:16] No articles found for source: Reuters
-[2024-12-18 10:01:16] No articles found for source: USA Today
-[2024-12-18 10:01:16] Total unique articles by source: 10
-[2024-12-18 10:01:16] Total articles matching keywords: 1
-[2024-12-18 10:01:16] Added additional articles to meet minimum quota of 100.
-[2024-12-18 10:01:16] Saved 100 articles to news_20241218_100106.csv
-[2024-12-18 10:01:42] Changes have been successfully pushed to the repository.
-[2024-12-18 10:01:42] News Sentinel script completed successfully.
-[2024-12-18 10:27:38] News Sentinel script started.
-[2024-12-18 10:27:38] Fetching articles from The New York Times
-[2024-12-18 10:27:38] Fetching articles from The Atlantic
-[2024-12-18 10:27:39] Fetching articles from Reuters
-[2024-12-18 10:27:39] Failed to parse feed: https://feeds.reuters.com/reuters/topNews
-[2024-12-18 10:27:39] Failed to fetch from Reuters. Using fallback.
-[2024-12-18 10:27:40] Failed to fetch articles from NewsAPI: 401 Client Error: Unauthorized for url: https://newsapi.org/v2/everything?q=AI+OR+artificial+intelligence+OR+machine+learning+OR+deep+learning+OR+Python&apiKey=your_actual_news_api_key&pageSize=30
-[2024-12-18 10:27:40] Fetching articles from NPR
-[2024-12-18 10:27:40] Fetching articles from CNET
-[2024-12-18 10:27:40] Fetching articles from Wired
-[2024-12-18 10:27:40] Total articles fetched: 134
-[2024-12-18 10:27:40] Total unique articles by source: 5
-[2024-12-18 10:27:40] Total articles matching keywords: 3
-[2024-12-18 10:27:40] Added 2 non-matching articles to meet minimum quota of 100.
-[2024-12-18 10:27:40] Saved 5 articles to news_20241218_102738.csv
-[2024-12-18 10:27:48] Changes have been successfully pushed to the repository.
-[2024-12-18 10:27:48] News Sentinel script completed successfully.
+[2024-12-18 18:52:22] INFO: News Sentinel started.
+[2024-12-18 18:52:22] INFO: Fetching articles from The New York Times
+[2024-12-18 18:52:23] INFO: Fetching articles from BBC News
+[2024-12-18 18:52:23] INFO: Fetching articles from TechCrunch
+[2024-12-18 18:52:24] INFO: Fetching articles from Reuters
+[2024-12-18 18:52:24] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.reuters.com
+[2024-12-18 18:52:24] WARNING: No articles fetched from Reuters
+[2024-12-18 18:52:24] INFO: Fetching articles from The Guardian
+[2024-12-18 18:52:30] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.theguardian.com
+[2024-12-18 18:52:30] WARNING: No articles fetched from The Guardian
+[2024-12-18 18:52:30] INFO: Fetching articles from Blavity
+[2024-12-18 18:52:33] ERROR: Failed to fetch RSS feed after 3 attempts: https://blavity.com
+[2024-12-18 18:52:33] WARNING: No articles fetched from Blavity
+[2024-12-18 18:52:33] INFO: Fetching articles from Black Enterprise
+[2024-12-18 18:52:36] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.blackenterprise.com
+[2024-12-18 18:52:36] WARNING: No articles fetched from Black Enterprise
+[2024-12-18 18:52:37] INFO: Fetching articles from MIT Technology Review
+[2024-12-18 18:52:41] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.technologyreview.com
+[2024-12-18 18:52:41] WARNING: No articles fetched from MIT Technology Review
+[2024-12-18 18:52:41] INFO: Fetching articles from Popular Science
+[2024-12-18 18:52:44] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.popsci.com
+[2024-12-18 18:52:44] WARNING: No articles fetched from Popular Science
+[2024-12-18 18:52:44] INFO: Fetching articles from Nature
+[2024-12-18 18:52:45] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.nature.com
+[2024-12-18 18:52:45] WARNING: No articles fetched from Nature
+[2024-12-18 18:52:45] INFO: Fetching articles from Complex
+[2024-12-18 18:52:47] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.complex.com
+[2024-12-18 18:52:47] WARNING: No articles fetched from Complex
+[2024-12-18 18:52:47] INFO: Fetching articles from Vibe
+[2024-12-18 18:52:48] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.vibe.com
+[2024-12-18 18:52:48] WARNING: No articles fetched from Vibe
+[2024-12-18 18:52:48] INFO: Fetching articles from OkayAfrica
+[2024-12-18 18:52:50] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.okayafrica.com
+[2024-12-18 18:52:50] WARNING: No articles fetched from OkayAfrica
+[2024-12-18 18:52:50] INFO: Fetching articles from Semafor
+[2024-12-18 18:52:52] ERROR: Failed to fetch RSS feed after 3 attempts: https://www.semafor.com
+[2024-12-18 18:52:52] WARNING: No articles fetched from Semafor
+[2024-12-18 18:52:53] INFO: Saved 106 articles to news_20241218_185253.csv
