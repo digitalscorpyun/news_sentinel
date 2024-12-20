@@ -5,6 +5,7 @@ import datetime
 import json
 import re
 import os
+import time
 
 # Load configuration from config.json
 def load_config():
@@ -13,7 +14,6 @@ def load_config():
 
 # Function to extract keywords from the article's text
 def extract_keywords(text, keywords):
-    # Case insensitive match for keywords
     matches = [keyword for keyword in keywords if re.search(r'\b' + re.escape(keyword) + r'\b', text, re.IGNORECASE)]
     return matches
 
@@ -27,7 +27,6 @@ def fetch_articles(url, keywords, error_log):
     }
 
     try:
-        # Fetch the webpage
         response = requests.get(url, headers=headers)
         response.raise_for_status()  # Raise an error for bad status codes
     except requests.exceptions.RequestException as e:
@@ -42,14 +41,12 @@ def fetch_articles(url, keywords, error_log):
     
     # Extract all article links and their corresponding content
     for article_tag in soup.find_all(['article', 'section']):
-        # Extract title (headline)
         title_tag = article_tag.find(['h1', 'h2'])
         if title_tag:
             title = title_tag.get_text(strip=True)
         else:
             title = "No Title Found"
 
-        # Extract the article's link
         link_tag = article_tag.find('a', href=True)
         if not link_tag:
             continue
@@ -59,13 +56,11 @@ def fetch_articles(url, keywords, error_log):
         if not link.startswith('http'):
             link = requests.compat.urljoin(url, link)
 
-        # Extract content from the article's main body
         body_tag = article_tag.find(['article', 'section', 'div', {'class': 'content'}])  # Adjust based on actual content class
         if body_tag:
             article_content = body_tag.get_text(strip=True)
             matched_keywords = extract_keywords(article_content, keywords)
 
-            # Only include articles that match at least one keyword
             if matched_keywords:
                 articles.append({
                     'title': title,
@@ -75,43 +70,54 @@ def fetch_articles(url, keywords, error_log):
     
     return articles
 
-# Function to save the CSV file for the articles
-def save_to_csv(articles, error_log):
-    # Define the current date and time for the filenames
+# Function to save the articles to a CSV file
+def save_to_csv(articles, websites, error_log):
     timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+    csv_filename = f"scraper_{timestamp}.csv"
 
-    # Save the articles to a CSV file
-    if articles:
-        with open(f"scraper_{timestamp}.csv", 'w', newline='', encoding='utf-8') as csvfile:
-            fieldnames = ['Headline', 'Link', 'Keywords']
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    # Open the CSV file for writing
+    with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ['Headline', 'Link', 'Keywords']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-            writer.writeheader()
-            for article in articles:
-                # Convert the link to just the website name and hyperlink the URL
-                website_name = article['link'].split('/')[2].replace('www.', '')
+        writer.writeheader()
+
+        # Track which websites are already in the CSV
+        processed_websites = {article['link'].split('/')[2].replace('www.', '') for article in articles}
+
+        # Write all articles to the CSV
+        for article in articles:
+            website_name = article['link'].split('/')[2].replace('www.', '')
+            writer.writerow({
+                'Headline': article['title'],
+                'Link': f'=HYPERLINK("{article["link"]}", "{website_name}")',
+                'Keywords': article['keywords']
+            })
+
+        # Add fallback rows for websites with no matching articles
+        for website in websites:
+            domain = website.split('/')[2].replace('www.', '')
+            if domain not in processed_websites:
                 writer.writerow({
-                    'Headline': article['title'],
-                    'Link': f'=HYPERLINK("{article["link"]}", "{website_name}")',
-                    'Keywords': article['keywords']
+                    'Headline': "No matching articles found",
+                    'Link': f'=HYPERLINK("{website}", "{domain}")',
+                    'Keywords': ""
                 })
 
-    # Save the error log CSV
+    print(f"Results saved to {csv_filename}")
+
+    # Save the error log to a CSV file
     if error_log:
-        with open(f"scraper_log_{timestamp}.csv", 'w', newline='', encoding='utf-8') as logfile:
+        error_log_filename = f"scraper_log_{timestamp}.csv"
+        with open(error_log_filename, 'w', newline='', encoding='utf-8') as logfile:
             fieldnames = ['Timestamp', 'URL', 'Error']
-            writer = csv.DictWriter(logfile, fieldnames=fieldnames)
-            writer.writeheader()
-            for error in error_log:
-                writer.writerow({
-                    'Timestamp': error[0],
-                    'URL': error[1],
-                    'Error': error[2]
-                })
+            writer = csv.writer(logfile)
+            writer.writerow(fieldnames)
+            writer.writerows(error_log)
+        print(f"Error log saved to {error_log_filename}")
     else:
         print("No errors to log.")
 
-# Main scraping function
 def main():
     config = load_config()
     keywords = config['KEYWORDS']
@@ -124,10 +130,10 @@ def main():
     for website in websites:
         articles = fetch_articles(website, keywords, error_log)
         all_articles.extend(articles)
-        time.sleep(2)  # Add a delay between requests to avoid hitting the server too hard
+        time.sleep(2)  # Delay to avoid overloading servers
 
     # Save articles to CSV and log errors
-    save_to_csv(all_articles, error_log)
+    save_to_csv(all_articles, websites, error_log)
 
 if __name__ == "__main__":
     main()
