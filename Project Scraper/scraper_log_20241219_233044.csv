@@ -1,0 +1,7 @@
+url,error
+https://blackgirlnerds.com/,403 Client Error: Forbidden for url: https://blackgirlnerds.com/
+https://andscape.com/,"HTTPSConnectionPool(host='www.disneyadvertising.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1020)')))"
+https://blavity.com/,403 Client Error: Forbidden for url: https://blavity.com/
+https://www.forbes.com/,"HTTPSConnectionPool(host='www.store.forbes.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.store.forbes.com'. (_ssl.c:1020)"")))"
+https://www.nytimes.com/,"HTTPSConnectionPool(host='advertising.nytimes.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1020)')))"
+https://myafricanmagazine.com/,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"

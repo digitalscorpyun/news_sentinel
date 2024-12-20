@@ -1,173 +1,105 @@
+import json
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime
 import csv
-import datetime
-import json
-import re
-import os
-import time
-import random
-
-# Persistent storage file for previously seen articles
-SEEN_ARTICLES_FILE = 'seen_articles.json'
+import concurrent.futures  # For parallel execution
 
 # Load configuration from config.json
 def load_config():
     with open('config.json', 'r') as config_file:
         return json.load(config_file)
 
-# Load previously seen articles to avoid duplicates
-def load_seen_articles():
-    if os.path.exists(SEEN_ARTICLES_FILE):
-        with open(SEEN_ARTICLES_FILE, 'r') as file:
-            return json.load(file)
-    return []
-
-# Save the updated list of seen articles
-def save_seen_articles(seen_articles):
-    with open(SEEN_ARTICLES_FILE, 'w') as file:
-        json.dump(seen_articles, file, indent=4)
-
-# Function to extract keywords with frequency balancing
-def extract_keywords(text, keywords, keyword_counts, max_black=5):
-    shuffled_keywords = keywords[:]
-    random.shuffle(shuffled_keywords)
-    matches = []
-    for keyword in shuffled_keywords:
-        if re.search(r'\b' + re.escape(keyword) + r'\b', text, re.IGNORECASE):
-            if keyword.lower() == "black" and keyword_counts.get(keyword, 0) >= max_black:
-                continue  # Skip "Black" if it exceeds the cap
-            matches.append(keyword)
-            keyword_counts[keyword] = keyword_counts.get(keyword, 0) + 1
+# Function to extract keywords from the article's text
+def extract_keywords(text, keywords):
+    matches = [keyword for keyword in keywords if keyword.lower() in text.lower()]
     return matches
 
-# Function to fetch articles and prevent duplicate headlines
-def fetch_articles(url, keywords, keyword_counts, seen_articles, error_log):
+# Function to fetch articles from a website
+def fetch_articles(url, keywords, error_log):
     print(f"Scraping {url}...")
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
-
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, timeout=10)  # Timeout added
         response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'lxml')  # Faster parser
+        articles = []
+        
+        for link in soup.find_all('a', href=True):
+            href = link['href']
+            if not href.startswith('http'):
+                href = url + href  # Handle relative links
+            if href and len(href) > 5:
+                title = link.get_text(strip=True) or "No Title Found"
+                article_text = requests.get(href, headers=headers, timeout=10).text  # Timeout added
+                matched_keywords = extract_keywords(article_text, keywords)
+                if matched_keywords:
+                    articles.append({
+                        'headline': title,
+                        'link': href,
+                        'keywords': ', '.join(matched_keywords)
+                    })
+        return articles
     except requests.exceptions.RequestException as e:
         print(f"Error fetching {url}: {e}")
-        error_log.append([str(datetime.datetime.now()), url, str(e)])
+        error_log.append({'url': url, 'error': str(e)})
         return []
 
-    soup = BeautifulSoup(response.content, 'html.parser')
-    articles = []
-
-    for article_tag in soup.find_all(['article', 'section']):
-        title = None
-
-        for tag in ['h1', 'h2', 'h3', 'title']:
-            title_tag = article_tag.find(tag)
-            if title_tag:
-                title = title_tag.get_text(strip=True)
-                break
-
-        if not title:
-            first_paragraph = article_tag.find('p')
-            title = first_paragraph.get_text(strip=True) if first_paragraph else "No Title Found"
-
-        link_tag = article_tag.find('a', href=True)
-        if not link_tag:
-            continue
-        link = link_tag['href']
-        if not link.startswith('http'):
-            link = requests.compat.urljoin(url, link)
-
-        # Skip duplicates by checking if the link is in seen articles
-        if link in seen_articles:
-            continue
-
-        body_tag = article_tag.find(['article', 'section', 'div', {'class': 'content'}])
-        if body_tag:
-            article_content = body_tag.get_text(strip=True)
-            matched_keywords = extract_keywords(article_content, keywords, keyword_counts)
-            if matched_keywords:
-                articles.append({
-                    'title': title,
-                    'link': link,
-                    'keywords': ', '.join(matched_keywords)
-                })
-                seen_articles.append(link)  # Add the link to seen articles
-
-    return articles
-
-# Function to save articles to CSV and track keyword usage
-def save_to_csv(articles, websites, error_log, keyword_counts):
-    timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
-    csv_filename = f"scraper_{timestamp}.csv"
-    unique_entries = set()
-
-    with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ['Headline', 'Link', 'Keywords']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-
-        processed_websites = {article['link'].split('/')[2].replace('www.', '') for article in articles}
-
-        for article in articles:
-            unique_id = (article['title'], article['link'])
-            if unique_id not in unique_entries:
-                unique_entries.add(unique_id)
-                website_name = article['link'].split('/')[2].replace('www.', '')
-                writer.writerow({
-                    'Headline': article['title'],
-                    'Link': f'=HYPERLINK("{article["link"]}", "{website_name}")',
-                    'Keywords': article['keywords']
-                })
-
-        for website in websites:
-            domain = website.split('/')[2].replace('www.', '')
-            if domain not in processed_websites:
-                writer.writerow({
-                    'Headline': domain,
-                    'Link': f'=HYPERLINK("{website}", "{domain}")',
-                    'Keywords': ""
-                })
-
-    print("\nKeyword Usage Statistics:")
-    for keyword, count in sorted(keyword_counts.items(), key=lambda x: -x[1]):
-        print(f"{keyword}: {count}")
-
-    print(f"\nResults saved to {csv_filename}")
-
-    if error_log:
-        error_log_filename = f"scraper_log_{timestamp}.csv"
-        with open(error_log_filename, 'w', newline='', encoding='utf-8') as logfile:
-            fieldnames = ['Timestamp', 'URL', 'Error']
-            writer = csv.writer(logfile)
-            writer.writerow(fieldnames)
-            writer.writerows(error_log)
-        print(f"Error log saved to {error_log_filename}")
-    else:
-        print("No errors to log.")
-
-# Main function
+# Main function with parallel scraping
 def main():
     config = load_config()
-    keywords = config['KEYWORDS']
-    websites = config['WEBSITES']
+    keywords = config.get("KEYWORDS", [])
+    websites = config.get("WEBSITES", [])
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    output_file = f"scraper_{timestamp}.csv"
+    error_log_file = f"scraper_log_{timestamp}.csv"
+    
+    scraped_articles = []
     error_log = []
-    keyword_counts = {}  # Track keyword usage for balancing
-    seen_articles = load_seen_articles()  # Load previously seen articles
 
-    all_articles = []
+    # Use ThreadPoolExecutor for parallel execution
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        futures = [executor.submit(fetch_articles, website, keywords, error_log) for website in websites]
+        
+        for future in concurrent.futures.as_completed(futures):
+            scraped_articles.extend(future.result())
 
-    while len(all_articles) < 200:  # Ensure at least 200 articles
-        for website in websites:
-            articles = fetch_articles(website, keywords, keyword_counts, seen_articles, error_log)
-            all_articles.extend(articles)
-            if len(all_articles) >= 200:
-                break
-        time.sleep(2)
+    # Ensure at least one link per website
+    for website in websites:
+        if not any(article['link'].startswith(website) for article in scraped_articles):
+            scraped_articles.append({
+                'headline': website,
+                'link': website,
+                'keywords': 'No matching articles found'
+            })
 
-    save_to_csv(all_articles, websites, error_log, keyword_counts)
-    save_seen_articles(seen_articles)  # Save updated seen articles
+    # Check for duplicates and remove them
+    unique_articles = {article['link']: article for article in scraped_articles}
+    scraped_articles = list(unique_articles.values())
+
+    # Minimum threshold check
+    if len(scraped_articles) < 100:
+        print(f"Warning: Only {len(scraped_articles)} articles scraped. Minimum threshold of 100 not met.")
+
+    # Write to CSV
+    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=['headline', 'link', 'keywords'])
+        writer.writeheader()
+        writer.writerows(scraped_articles)
+
+    # Write error log to CSV
+    if error_log:
+        with open(error_log_file, 'w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=['url', 'error'])
+            writer.writeheader()
+            writer.writerows(error_log)
+
+    print(f"Scraping complete. Results saved to {output_file}")
+    if error_log:
+        print(f"Errors logged in {error_log_file}")
 
 if __name__ == "__main__":
     main()
