@@ -1,0 +1,127 @@
+[2024-12-20 17:31:19] INFO: News Sentinel started.
+[2024-12-20 17:31:19] INFO: Scraping articles from dynamic site: The Grio
+[2024-12-20 17:31:19] INFO: ====== WebDriver manager ======
+[2024-12-20 17:31:26] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:31:26] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:31:26] INFO: There is no [win64] chromedriver "131.0.6778.204" for browser google-chrome "131.0.6778" in cache
+[2024-12-20 17:31:26] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:31:26] INFO: WebDriver version 131.0.6778.204 selected
+[2024-12-20 17:31:26] INFO: Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.204/win32/chromedriver-win32.zip
+[2024-12-20 17:31:26] INFO: About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.204/win32/chromedriver-win32.zip
+[2024-12-20 17:31:26] INFO: Driver downloading response is 200
+[2024-12-20 17:31:27] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:31:28] INFO: Driver has been saved in cache [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204]
+[2024-12-20 17:32:19] INFO: Scraping articles from dynamic site: The Root
+[2024-12-20 17:32:19] INFO: ====== WebDriver manager ======
+[2024-12-20 17:32:22] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:32:23] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:32:23] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:33:50] INFO: Scraping articles from dynamic site: Black Enterprise
+[2024-12-20 17:33:51] INFO: ====== WebDriver manager ======
+[2024-12-20 17:33:56] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:33:57] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:33:57] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:37:49] INFO: Scraping articles from dynamic site: Atlanta Black Star
+[2024-12-20 17:37:49] INFO: ====== WebDriver manager ======
+[2024-12-20 17:37:52] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:37:52] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:37:52] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:38:29] INFO: Scraping articles from dynamic site: HuffPost Black Voices
+[2024-12-20 17:38:29] INFO: ====== WebDriver manager ======
+[2024-12-20 17:38:31] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:38:32] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:38:32] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:39:26] INFO: Scraping articles from dynamic site: NewsOne
+[2024-12-20 17:39:26] INFO: ====== WebDriver manager ======
+[2024-12-20 17:39:29] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:39:29] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:39:29] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:41:09] INFO: Scraping articles from dynamic site: Black Girl Nerds
+[2024-12-20 17:41:09] INFO: ====== WebDriver manager ======
+[2024-12-20 17:41:12] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:41:12] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:41:13] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:52:45] INFO: Scraping articles from dynamic site: Andscape
+[2024-12-20 17:52:45] INFO: ====== WebDriver manager ======
+[2024-12-20 17:52:50] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:52:50] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:52:50] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:53:53] INFO: Scraping articles from dynamic site: Semafor
+[2024-12-20 17:53:53] INFO: ====== WebDriver manager ======
+[2024-12-20 17:53:56] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:53:56] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:53:56] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:54:27] INFO: Scraping articles from dynamic site: Blavity
+[2024-12-20 17:54:27] INFO: ====== WebDriver manager ======
+[2024-12-20 17:54:32] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:54:32] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:54:32] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:54:46] INFO: Scraping articles from dynamic site: Forbes
+[2024-12-20 17:54:46] INFO: ====== WebDriver manager ======
+[2024-12-20 17:54:49] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:54:50] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:54:50] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:56:32] INFO: Scraping articles from dynamic site: Financial Times
+[2024-12-20 17:56:32] INFO: ====== WebDriver manager ======
+[2024-12-20 17:56:36] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:57:21] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:57:21] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:58:08] INFO: Scraping articles from dynamic site: New York Times
+[2024-12-20 17:58:08] INFO: ====== WebDriver manager ======
+[2024-12-20 17:58:11] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:58:12] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:58:12] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 17:59:47] INFO: Scraping articles from dynamic site: USA Today
+[2024-12-20 17:59:47] INFO: ====== WebDriver manager ======
+[2024-12-20 17:59:51] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:59:52] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 17:59:52] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 18:00:52] INFO: Scraping articles from dynamic site: IBM
+[2024-12-20 18:00:52] INFO: ====== WebDriver manager ======
+[2024-12-20 18:00:55] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:00:55] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:00:55] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 18:01:20] INFO: Scraping articles from dynamic site: My African Magazine
+[2024-12-20 18:01:21] INFO: ====== WebDriver manager ======
+[2024-12-20 18:01:24] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:01:24] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:01:24] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 18:01:49] INFO: Scraping articles from dynamic site: Los Angeles Times
+[2024-12-20 18:01:49] INFO: ====== WebDriver manager ======
+[2024-12-20 18:01:50] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:01:50] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:01:51] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 18:03:46] INFO: Scraping articles from dynamic site: GitHub
+[2024-12-20 18:03:47] INFO: ====== WebDriver manager ======
+[2024-12-20 18:03:49] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:03:49] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:03:50] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 18:04:11] INFO: Scraping articles from dynamic site: OpenAI Community
+[2024-12-20 18:04:12] INFO: ====== WebDriver manager ======
+[2024-12-20 18:04:14] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:04:15] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:04:15] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 18:04:40] INFO: Scraping articles from dynamic site: GPTBot Guide
+[2024-12-20 18:04:41] INFO: ====== WebDriver manager ======
+[2024-12-20 18:04:43] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:04:43] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:04:43] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 18:05:09] INFO: Scraping articles from dynamic site: Guides.AI
+[2024-12-20 18:05:09] INFO: ====== WebDriver manager ======
+[2024-12-20 18:05:11] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:05:11] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:05:11] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 18:05:23] INFO: Scraping articles from dynamic site: Contraband Camp
+[2024-12-20 18:05:23] INFO: ====== WebDriver manager ======
+[2024-12-20 18:05:26] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:05:26] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:05:26] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 18:05:46] INFO: Scraping articles from dynamic site: Hugging Face
+[2024-12-20 18:05:46] INFO: ====== WebDriver manager ======
+[2024-12-20 18:05:50] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:05:50] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-20 18:05:50] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-20 18:06:06] INFO: Filtered 103 articles matching keywords.
+[2024-12-20 18:06:06] WARNING: Fewer than 200 articles found. Adding unfiltered articles to meet the quota.
+[2024-12-20 18:06:06] INFO: Total articles after fallback: 103
+[2024-12-20 18:06:06] INFO: Saved 103 articles to news_20241220_180606.csv

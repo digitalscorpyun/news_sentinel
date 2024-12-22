@@ -1,108 +1,152 @@
-import json
 import requests
-from bs4 import BeautifulSoup
-from datetime import datetime
+import feedparser
 import csv
-import concurrent.futures  # For parallel execution
+import logging
+import os
+import time
+from datetime import datetime
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+import json
+from requests.exceptions import RequestException
 
-# Load configuration from config.json
-def load_config():
-    with open('config.json', 'r') as config_file:
-        return json.load(config_file)
+# --- Load Configuration ---
+with open("config.json", "r") as config_file:
+    CONFIG = json.load(config_file)
 
-# Function to extract keywords from the article's text
-def extract_keywords(text, keywords):
-    matches = [keyword for keyword in keywords if keyword.lower() in text.lower()]
-    return matches
+# --- Logging Configuration ---
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+log_filename = f"news_sentinel_log_{timestamp}.log"
+logging.basicConfig(
+    filename=log_filename,
+    level=logging.INFO,
+    format="[%(asctime)s] %(levelname)s: %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+logging.getLogger().addHandler(console_handler)
 
-# Function to fetch articles from a website
-def fetch_articles(url, keywords, error_log):
-    print(f"Scraping {url}...")
-    headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-    'Accept-Language': 'en-US,en;q=0.9',
-    'Referer': 'https://www.google.com/'
-}
+# --- Global Variables ---
+KEYWORDS = CONFIG.get("KEYWORDS", [])
+RSS_FEEDS = CONFIG.get("RSS_FEEDS", {})
+WEBSITES = CONFIG.get("WEBSITES", {})
 
-    try:
-        response = requests.get(url, headers=headers, timeout=10)  # Timeout added
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'lxml')  # Faster parser
-        articles = []
-        
-        for link in soup.find_all('a', href=True):
-            href = link['href']
-            if not href.startswith('http'):
-                href = url + href  # Handle relative links
-            if href and len(href) > 5:
-                title = link.get_text(strip=True) or "No Title Found"
-                article_text = requests.get(href, headers=headers, timeout=10).text  # Timeout added
-                matched_keywords = extract_keywords(article_text, keywords)
-                if matched_keywords:
-                    articles.append({
-                        'headline': title,
-                        'link': href,
-                        'keywords': ', '.join(matched_keywords)
-                    })
-        return articles
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching {url}: {e}")
-        error_log.append({'url': url, 'error': str(e)})
-        return []
+# --- Helper Functions ---
+def fetch_rss_feed(url, retries=3, backoff_factor=2):
+    """Fetch articles from an RSS feed with retries."""
+    for attempt in range(retries):
+        try:
+            feed = feedparser.parse(url)
+            if not feed.bozo:
+                return feed.entries
+        except Exception as e:
+            logging.warning(f"Attempt {attempt + 1} failed for {url}: {e}")
+            time.sleep(backoff_factor ** attempt)  # Exponential backoff
+    logging.error(f"Failed to fetch RSS feed after {retries} attempts: {url}")
+    return []
 
-# Main function with parallel scraping
+def initialize_webdriver():
+    """Initialize Selenium WebDriver for dynamic content scraping."""
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_service = ChromeService(executable_path=ChromeDriverManager().install())
+    return webdriver.Chrome(service=chrome_service, options=chrome_options)
+
+def fetch_dynamic_content(url, source_name, retries=3):
+    """Fetch articles from dynamically loaded websites using Selenium."""
+    for attempt in range(retries):
+        try:
+            driver = initialize_webdriver()
+            driver.get(url)
+            time.sleep(5)  # Allow time for dynamic content to load
+            articles = driver.find_elements(By.TAG_NAME, "a")
+            results = []
+            for article in articles:
+                title = article.text.strip()
+                link = article.get_attribute("href")
+                if title and link and any(keyword.lower() in title.lower() for keyword in KEYWORDS):
+                    results.append({"title": title, "link": link, "source": source_name})
+            driver.quit()
+            return results
+        except Exception as e:
+            logging.error(f"Selenium scraping error for {url}: {e}")
+            time.sleep(2 ** attempt)  # Exponential backoff
+    logging.error(f"Failed to scrape dynamic content after {retries} attempts: {url}")
+    return []
+
+def save_to_csv(articles, filename):
+    """Save articles to a CSV file."""
+    with open(filename, mode="w", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        writer.writerow(["Source", "Title", "Link", "Keywords Used"])
+        for article in articles:
+            source = article.get("source", "").strip()
+            title = article.get("title", "").strip()
+            link = f'=HYPERLINK("{article.get("link", "")}", "Link")'
+            keywords = ", ".join(article.get("keywords", []))
+            writer.writerow([source, title, link, keywords])
+
+def filter_articles_by_keywords(articles, keywords):
+    """Filter articles based on keywords."""
+    filtered_articles = []
+    for article in articles:
+        title = article.get("title", "").lower()
+        matching_keywords = [keyword for keyword in keywords if keyword.lower() in title]
+        if matching_keywords:
+            article["keywords"] = matching_keywords
+            filtered_articles.append(article)
+    return filtered_articles
+
+# --- Main Script ---
 def main():
-    config = load_config()
-    keywords = config.get("KEYWORDS", [])
-    websites = config.get("WEBSITES", [])
+    logging.info("News Sentinel started.")
+    all_articles = []
+    filtered_articles = []
+
+    # --- Fetch articles from RSS feeds ---
+    for source_name, url in RSS_FEEDS.items():
+        logging.info(f"Fetching articles from RSS feed: {source_name}")
+        articles = fetch_rss_feed(url)
+        if articles:
+            for entry in articles:
+                all_articles.append({
+                    "title": entry.get("title", "").strip(),
+                    "link": entry.get("link", "").strip(),
+                    "source": source_name
+                })
+        else:
+            logging.warning(f"No articles fetched from RSS feed: {source_name}")
+
+    # --- Fetch articles from dynamic websites ---
+    for source_name, url in WEBSITES.items():
+        if source_name not in RSS_FEEDS:  # Avoid duplicating RSS sources
+            logging.info(f"Scraping articles from dynamic site: {source_name}")
+            articles = fetch_dynamic_content(url, source_name)
+            all_articles.extend(articles)
+
+    # --- Filter articles by keywords ---
+    filtered_articles = filter_articles_by_keywords(all_articles, KEYWORDS)
+    logging.info(f"Filtered {len(filtered_articles)} articles matching keywords.")
+
+    # --- Ensure minimum 200 articles ---
+    if len(filtered_articles) < 200:
+        logging.warning("Fewer than 200 articles found. Adding unfiltered articles to meet the quota.")
+        additional_articles = [article for article in all_articles if article not in filtered_articles]
+        filtered_articles += additional_articles[:200 - len(filtered_articles)]
+    logging.info(f"Total articles after fallback: {len(filtered_articles)}")
+
+    # --- Save to CSV ---
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    
-    output_file = f"scraper_{timestamp}.csv"
-    error_log_file = f"scraper_log_{timestamp}.csv"
-    
-    scraped_articles = []
-    error_log = []
-
-    # Use ThreadPoolExecutor for parallel execution
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        futures = [executor.submit(fetch_articles, website, keywords, error_log) for website in websites]
-        
-        for future in concurrent.futures.as_completed(futures):
-            scraped_articles.extend(future.result())
-
-    # Ensure at least one link per website
-    for website in websites:
-        if not any(article['link'].startswith(website) for article in scraped_articles):
-            scraped_articles.append({
-                'headline': website,
-                'link': website,
-                'keywords': 'No matching articles found'
-            })
-
-    # Check for duplicates and remove them
-    unique_articles = {article['link']: article for article in scraped_articles}
-    scraped_articles = list(unique_articles.values())
-
-    # Minimum threshold check
-    if len(scraped_articles) < 100:
-        print(f"Warning: Only {len(scraped_articles)} articles scraped. Minimum threshold of 100 not met.")
-
-    # Write to CSV
-    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=['headline', 'link', 'keywords'])
-        writer.writeheader()
-        writer.writerows(scraped_articles)
-
-    # Write error log to CSV
-    if error_log:
-        with open(error_log_file, 'w', newline='', encoding='utf-8') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=['url', 'error'])
-            writer.writeheader()
-            writer.writerows(error_log)
-
-    print(f"Scraping complete. Results saved to {output_file}")
-    if error_log:
-        print(f"Errors logged in {error_log_file}")
+    output_file = f"news_{timestamp}.csv"
+    save_to_csv(filtered_articles, output_file)
+    logging.info(f"Saved {len(filtered_articles)} articles to {output_file}")
 
 if __name__ == "__main__":
     main()
