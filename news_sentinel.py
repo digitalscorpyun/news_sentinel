@@ -87,6 +87,7 @@ def save_to_csv(articles, filename):
 
 def filter_articles_by_keywords(articles, keywords):
     """Filter articles based on keywords."""
+    # List to store articles that match the specified keywords
     filtered_articles = []
     keyword_counts = {keyword: 0 for keyword in keywords}
     for article in articles:
