@@ -17,7 +17,7 @@ with open("config.json", "r") as config_file:
     CONFIG = json.load(config_file)
 
 # --- Logging Configuration ---
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 log_filename = f"news_sentinel_log_{timestamp}.log"
 logging.basicConfig(
     filename=log_filename,
@@ -32,6 +32,7 @@ logging.getLogger().addHandler(console_handler)
 # --- Global Variables ---
 KEYWORDS = CONFIG.get("keywords", [])
 WEBSITES = CONFIG.get("websites", {})
+CHROME_DRIVER_PATH = ChromeDriverManager().install()
 
 # --- Helper Functions ---
 def initialize_webdriver():
@@ -43,21 +44,20 @@ def initialize_webdriver():
         chrome_options.add_argument("--no-sandbox")  # Disable sandbox (use with caution)
         chrome_options.add_argument("--disable-dev-shm-usage")  # Helps with memory issues in headless mode
         chrome_options.add_argument("--disable-extensions")  # Disable Chrome extensions
-        chrome_service = ChromeService(executable_path=ChromeDriverManager().install())
+        chrome_service = ChromeService(executable_path=CHROME_DRIVER_PATH)
         return webdriver.Chrome(service=chrome_service, options=chrome_options)
     except Exception as e:
         logging.error(f"Failed to initialize WebDriver: {e}")
         raise
 
-def fetch_dynamic_content(url, source_name, retries=3):
+def fetch_dynamic_content(driver, url, source_name, retries=3):
     """Fetch articles from dynamically loaded websites using Selenium."""
     for attempt in range(retries):
         try:
-            driver = initialize_webdriver()
             driver.set_page_load_timeout(120)  # Increased timeout duration
             driver.get(url)
             logging.info(f"Accessed {url}, page title: {driver.title}")
-            WebDriverWait(driver, 120).until(EC.presence_of_element_located((By.TAG_NAME, "a")))  # Wait until links are loaded
+            WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, "//article//a")))  # Wait until specific article links are loaded
             articles = driver.find_elements(By.XPATH, "//article//a")  # Adjust XPath for articles
             results = []
             for article in articles:
@@ -82,9 +82,8 @@ def save_to_csv(articles, filename):
         for article in articles:
             source = article.get("source", "").strip()
             title = article.get("title", "").strip().replace(",", "").replace('"', "")
-            link = f'=HYPERLINK("{article.get("link", "")}", "Link")'
-            keywords = ", ".join(article.get("keywords", []))
-            writer.writerow([source, title, link, keywords])
+            link = f'=HYPERLINK("{article.get("link", "")}", "{title}")'
+            writer.writerow([source, title, link, ", ".join(article.get("keywords", []))])
 
 def filter_articles_by_keywords(articles, keywords):
     """Filter articles based on keywords."""
@@ -108,9 +107,10 @@ def main():
     all_articles = []
 
     # --- Fetch articles from dynamic websites ---
+    driver = initialize_webdriver()
     for source_name, url in WEBSITES.items():
         logging.info(f"Scraping articles from dynamic site: {source_name}")
-        articles = fetch_dynamic_content(url, source_name)
+        articles = fetch_dynamic_content(driver, url, source_name)
         all_articles.extend(articles)
 
     # --- Log total articles fetched ---
@@ -124,15 +124,17 @@ def main():
     # --- Ensure minimum 100 articles ---
     if len(filtered_articles) < 100:
         logging.warning("Fewer than 100 articles found. Adding unfiltered articles to meet the quota.")
-        additional_articles = [article for article in all_articles if article not in filtered_articles]
+        filtered_articles_set = set(filtered_articles)
+        filtered_titles = [article['title'] for article in filtered_articles]
+        additional_articles = [article for article in all_articles if article['title'] not in filtered_titles]
         filtered_articles += additional_articles[:100 - len(filtered_articles)]
-    logging.info(f"Total articles after fallback: {len(filtered_articles)}")
 
-    # --- Save to CSV ---
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    output_file = f"news_{timestamp}.csv"
     output_file = f"news_{timestamp}.csv"
     save_to_csv(filtered_articles, output_file)
-    logging.info(f"Saved {len(filtered_articles)} articles to {output_file}")
+
+    driver.quit()  # Close the browser after all scrapes are done
 
 if __name__ == "__main__":
     main()
