@@ -25,7 +25,7 @@ WEBSITES = CONFIG.get("WEBSITES", [])
 
 # --- Logging Setup ---
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-log_filename = f"news_sentinel_log_{timestamp}.log"
+log_filename = f"copilot_news_scraper_log_{timestamp}.log"  # Updated log filename
 logging.basicConfig(
     filename=log_filename,
     level=logging.INFO,
@@ -41,7 +41,8 @@ logging.info("Script execution started.")  # Log the script start
 def get_source_name(url):
     """Extract the source name from a URL."""
     domain = urlparse(url).netloc
-    return domain.split('.')[1].upper()  # Get the main part of the domain and convert to uppercase
+    parts = domain.split('.')
+    return parts[-2].upper() if len(parts) > 2 else parts[0].upper()
 
 def fetch_articles(url):
     """Fetch articles from a website using BeautifulSoup."""
@@ -70,12 +71,13 @@ def fetch_articles(url):
 def save_to_csv(articles, filename):
     """Save articles to a CSV file with hyperlinked URLs."""
     unique_articles = []
-    seen_urls = set()
+    seen = set()
 
     for article in articles:
-        if article["link"] not in seen_urls:
+        identifier = (article["title"], article["link"])
+        if identifier not in seen:
             unique_articles.append(article)
-            seen_urls.add(article["link"])
+            seen.add(identifier)
 
     with open(filename, mode="w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
@@ -103,11 +105,18 @@ def main():
     logging.info("Starting article scraping...")
     all_articles = []
     article_counts = {}
+    max_retries = 3
 
     for url in WEBSITES:
-        articles = fetch_articles(url)
+        articles = []
+        for attempt in range(max_retries):
+            articles = fetch_articles(url)
+            if articles:
+                break
+            logging.warning(f"Retrying {url} (Attempt {attempt+1}/{max_retries})...")
+
         all_articles.extend(articles)
-        article_counts[url] = len(articles)
+        article_counts[get_source_name(url)] = len(articles)
 
     if len(all_articles) < 100:
         logging.warning("Fewer than 100 articles found. Adding additional unfiltered articles to reach quota.")
