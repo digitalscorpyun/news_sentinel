@@ -1,11 +1,14 @@
+import matplotlib
+matplotlib.use('Agg')  # Use Agg backend to avoid Tkinter issues
+import matplotlib.pyplot as plt
 import requests
 from bs4 import BeautifulSoup
 import csv
 import json
 import logging
 from datetime import datetime
-import matplotlib.pyplot as plt
 import seaborn as sns
+from urllib.parse import urlparse
 
 # --- Configuration ---
 CONFIG = {}
@@ -35,6 +38,11 @@ logging.getLogger().addHandler(console_handler)
 
 logging.info("Script execution started.")  # Log the script start
 
+def get_source_name(url):
+    """Extract the source name from a URL."""
+    domain = urlparse(url).netloc
+    return domain.split('.')[1].upper()  # Get the main part of the domain and convert to uppercase
+
 def fetch_articles(url):
     """Fetch articles from a website using BeautifulSoup."""
     try:
@@ -51,7 +59,7 @@ def fetch_articles(url):
                 title = link.text.strip()
                 href = link.get('href')
                 if title and href and any(keyword.lower() in title.lower() for keyword in KEYWORDS):
-                    articles.append({"title": title, "link": href, "source": url})
+                    articles.append({"title": title, "link": href, "source": get_source_name(url)})
         
         logging.info(f"Retrieved {len(articles)} articles from {url}")
         return articles
@@ -61,26 +69,35 @@ def fetch_articles(url):
 
 def save_to_csv(articles, filename):
     """Save articles to a CSV file with hyperlinked URLs."""
+    unique_articles = []
+    seen_urls = set()
+
+    for article in articles:
+        if article["link"] not in seen_urls:
+            unique_articles.append(article)
+            seen_urls.add(article["link"])
+
     with open(filename, mode="w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         writer.writerow(["Source", "Title", "Link"])
-        for article in articles:
+        for article in unique_articles:
             writer.writerow([
                 article["source"],
                 article["title"],
-                f'=HYPERLINK("{article["link"]}", "{article["link"]}")'
+                f'=HYPERLINK("{article["link"]}", "LINK")'  # Display "LINK" as the clickable URL
             ])
 
 def plot_article_counts(article_counts):
     """Generate a bar chart for the number of articles fetched from each website."""
     fig, ax = plt.subplots(figsize=(10, 6))  # Adjust the figure size for better readability
     sns.barplot(x=list(article_counts.keys()), y=list(article_counts.values()), ax=ax)
-    ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha='right', fontsize=10)  # Rotate labels and adjust font size
+    ax.set_xticks(range(len(article_counts)))  # Set the ticks
+    ax.set_xticklabels(list(article_counts.keys()), rotation=45, ha='right', fontsize=10)  # Rotate labels and adjust font size
     plt.xlabel('Website')
     plt.ylabel('Number of Articles')
     plt.title('Number of Articles Fetched from Each Website')
     plt.tight_layout()
-    plt.show()
+    plt.savefig('article_counts.png')  # Save the plot as an image file
 
 def main():
     logging.info("Starting article scraping...")
