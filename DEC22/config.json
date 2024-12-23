@@ -1,21 +1,51 @@
 {
-    "keywords": [
-        "critical race theory", "black culture", "slavery", "artificial intelligence", 
-        "machine learning", "Kendrick Lamar", "programming", "coding", "LLM", "LLMs", 
-        "Large-Language Models", "African diaspora", "Black culture", "DEI", "Howard French", 
-        "Michael Harriot", "ChatGPT", "generative pretrained transformer", "Google Gemini", 
-        "Microsoft Copilot", "Meta Llama", "PowerShell", "African-American", "enslaved", "racism", "Black", "Black community"
+    "WEBSITES": [
+        "https://thegrio.com/",
+        "https://www.theroot.com/",
+        "https://www.blackenterprise.com/",
+        "https://atlantablackstar.com/",
+        "https://www.huffpost.com/voices/black-voices",
+        "https://newsone.com/",
+        "https://blackgirlnerds.com/",
+        "https://andscape.com/",
+        "https://www.semafor.com/",
+        "https://blavity.com/",
+        "https://www.forbes.com/",
+        "https://www.ft.com/",
+        "https://www.nytimes.com/",
+        "https://www.usatoday.com/",
+        "https://www.ibm.com/us-en",
+        "https://myafricanmagazine.com/",
+        "https://www.latimes.com/",
+        "https://github.com/",
+        "https://community.openai.com/",
+        "https://gptbot.io/master-chatgpt-prompting-techniques-guide/#:~:text=I.%20Introduction",
+        "https://guides.ai/",
+        "https://www.contrabandcamp.com/",
+        "https://huggingface.co/"
     ],
-    "websites": {
-        "New York Times": "https://www.nytimes.com/",
-        "The Grio": "https://thegrio.com/",
-        "The Root": "https://www.theroot.com/",
-        "Black Enterprise": "https://www.blackenterprise.com/",
-        "Atlanta Black Star": "https://atlantablackstar.com/",
-        "HuffPost Black Voices": "https://www.huffpost.com/voices/black-voices",
-        "NewsOne": "https://newsone.com/",
-        "Black Girl Nerds": "https://blackgirlnerds.com/",
-        "Andscape": "https://andscape.com/"
-            }
-        }
-       
+    "KEYWORDS": [
+        "critical race theory",
+        "black culture",
+        "slavery",
+        "artificial intelligence",
+        "machine learning",
+        "Kendrick Lamar",
+        "programming",
+        "coding",
+        "LLM",
+        "LLMs",
+        "Large-Language Models",
+        "African diaspora",
+        "Black culture",
+        "DEI",
+        "Howard French",
+        "Michael Harriot",
+        "ChatGPT",
+        "generative pretrained transformer",
+        "Google Gemini",
+        "Microsoft Copilot",
+        "Meta Llama",
+        "PowerShell"
+    ]
+}

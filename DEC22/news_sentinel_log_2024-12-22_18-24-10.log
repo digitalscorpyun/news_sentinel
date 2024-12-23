@@ -1,0 +1,115 @@
+[2024-12-22 18:24:10] INFO: ====== WebDriver manager ======
+[2024-12-22 18:24:16] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-22 18:24:17] INFO: Get LATEST chromedriver version for google-chrome
+[2024-12-22 18:24:17] INFO: Driver [C:\Users\miker\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+[2024-12-22 18:24:17] INFO: News Sentinel started.
+[2024-12-22 18:24:22] INFO: Scraping articles from dynamic site: New York Times
+[2024-12-22 18:24:58] INFO: Accessed https://www.nytimes.com/, page title: The New York Times - Breaking News, US News, World News and Videos
+[2024-12-22 18:25:28] ERROR: Attempt 1 failed for https://www.nytimes.com/: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00E6EC13+23731]
+	(No symbol) [0x00DFC394]
+	(No symbol) [0x00CDBE63]
+	(No symbol) [0x00D1FCE6]
+	(No symbol) [0x00D1FF2B]
+	(No symbol) [0x00D5D892]
+	(No symbol) [0x00D41EA4]
+	(No symbol) [0x00D5B46E]
+	(No symbol) [0x00D41BF6]
+	(No symbol) [0x00D13F35]
+	(No symbol) [0x00D14EBD]
+	GetHandleVerifier [0x0114F0D3+3039603]
+	GetHandleVerifier [0x01162DEA+3120778]
+	GetHandleVerifier [0x0115B592+3089970]
+	GetHandleVerifier [0x00F043B0+635984]
+	(No symbol) [0x00E04DCD]
+	(No symbol) [0x00E02068]
+	(No symbol) [0x00E02205]
+	(No symbol) [0x00DF4FD0]
+	BaseThreadInitThunk [0x75B65D49+25]
+	RtlInitializeExceptionChain [0x77D7CEBB+107]
+	RtlGetAppContainerNamedObjectPath [0x77D7CE41+561]
+
+[2024-12-22 18:26:15] INFO: Accessed https://www.nytimes.com/, page title: The New York Times - Breaking News, US News, World News and Videos
+[2024-12-22 18:26:46] ERROR: Attempt 2 failed for https://www.nytimes.com/: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00E6EC13+23731]
+	(No symbol) [0x00DFC394]
+	(No symbol) [0x00CDBE63]
+	(No symbol) [0x00D1FCE6]
+	(No symbol) [0x00D1FF2B]
+	(No symbol) [0x00D5D892]
+	(No symbol) [0x00D41EA4]
+	(No symbol) [0x00D5B46E]
+	(No symbol) [0x00D41BF6]
+	(No symbol) [0x00D13F35]
+	(No symbol) [0x00D14EBD]
+	GetHandleVerifier [0x0114F0D3+3039603]
+	GetHandleVerifier [0x01162DEA+3120778]
+	GetHandleVerifier [0x0115B592+3089970]
+	GetHandleVerifier [0x00F043B0+635984]
+	(No symbol) [0x00E04DCD]
+	(No symbol) [0x00E02068]
+	(No symbol) [0x00E02205]
+	(No symbol) [0x00DF4FD0]
+	BaseThreadInitThunk [0x75B65D49+25]
+	RtlInitializeExceptionChain [0x77D7CEBB+107]
+	RtlGetAppContainerNamedObjectPath [0x77D7CE41+561]
+
+[2024-12-22 18:27:22] INFO: Accessed https://www.nytimes.com/, page title: The New York Times - Breaking News, US News, World News and Videos
+[2024-12-22 18:27:53] ERROR: Attempt 3 failed for https://www.nytimes.com/: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00E6EC13+23731]
+	(No symbol) [0x00DFC394]
+	(No symbol) [0x00CDBE63]
+	(No symbol) [0x00D1FCE6]
+	(No symbol) [0x00D1FF2B]
+	(No symbol) [0x00D5D892]
+	(No symbol) [0x00D41EA4]
+	(No symbol) [0x00D5B46E]
+	(No symbol) [0x00D41BF6]
+	(No symbol) [0x00D13F35]
+	(No symbol) [0x00D14EBD]
+	GetHandleVerifier [0x0114F0D3+3039603]
+	GetHandleVerifier [0x01162DEA+3120778]
+	GetHandleVerifier [0x0115B592+3089970]
+	GetHandleVerifier [0x00F043B0+635984]
+	(No symbol) [0x00E04DCD]
+	(No symbol) [0x00E02068]
+	(No symbol) [0x00E02205]
+	(No symbol) [0x00DF4FD0]
+	BaseThreadInitThunk [0x75B65D49+25]
+	RtlInitializeExceptionChain [0x77D7CEBB+107]
+	RtlGetAppContainerNamedObjectPath [0x77D7CE41+561]
+
+[2024-12-22 18:27:57] ERROR: Failed to scrape https://www.nytimes.com/ after 3 attempts
+[2024-12-22 18:27:57] INFO: Scraping articles from dynamic site: The Grio
+[2024-12-22 18:28:09] INFO: Accessed https://thegrio.com/, page title: Black News, Lifestyle and Opinion - TheGrio
+[2024-12-22 18:28:35] INFO: Found 9 articles from The Grio
+[2024-12-22 18:28:35] INFO: Scraping articles from dynamic site: The Root
+[2024-12-22 18:30:05] ERROR: Attempt 1 failed for https://www.theroot.com/: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.205)
+Stacktrace:
+	GetHandleVerifier [0x00E6EC13+23731]
+	(No symbol) [0x00DFC394]
+	(No symbol) [0x00CDBE63]
+	(No symbol) [0x00CCC428]
+	(No symbol) [0x00CCC349]
+	(No symbol) [0x00CDE2F0]
+	(No symbol) [0x00D5ADB9]
+	(No symbol) [0x00D41BF6]
+	(No symbol) [0x00D13F35]
+	(No symbol) [0x00D14EBD]
+	GetHandleVerifier [0x0114F0D3+3039603]
+	GetHandleVerifier [0x01162DEA+3120778]
+	GetHandleVerifier [0x0115B592+3089970]
+	GetHandleVerifier [0x00F043B0+635984]
+	(No symbol) [0x00E04DCD]
+	(No symbol) [0x00E02068]
+	(No symbol) [0x00E02205]
+	(No symbol) [0x00DF4FD0]
+	BaseThreadInitThunk [0x75B65D49+25]
+	RtlInitializeExceptionChain [0x77D7CEBB+107]
+	RtlGetAppContainerNamedObjectPath [0x77D7CE41+561]
+
