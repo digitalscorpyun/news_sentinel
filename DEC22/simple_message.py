@@ -13,5 +13,5 @@ print(message)
 message = "crimson dragon"
 print(message)
 
-message = "blue whale"
+message = "One of Python's strengths is its diverse and supportive community."
 print(message)
