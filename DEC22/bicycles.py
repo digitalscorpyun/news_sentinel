@@ -10,3 +10,6 @@ print(bicycles[1])
 print(bicycles[3])
 # Accessing the last element in the list
 print(bicycles[-1])
+# Accessing an element in the list and concatenating it with a string
+message = "My first bicycle was a " + bicycles[0].title() + "."
+print(message)
