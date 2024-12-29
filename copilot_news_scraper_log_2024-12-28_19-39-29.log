@@ -1,0 +1,703 @@
+[2024-12-28 19:39:29] INFO: Script execution started.
+[2024-12-28 19:39:29] INFO: Starting article scraping...
+[2024-12-28 19:39:29] INFO: Fetching articles from https://www.technologyreview.com/
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: MIT Technology Review
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Featured
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Topics
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Newsletters
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Events
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Audio
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Sign in
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: MIT Technology Review
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Featured
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Topics
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Newsletters
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Events
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Audio
+[2024-12-28 19:39:30] INFO: Filtered out by keyword: Sign in
+[2024-12-28 19:39:30] INFO: Retrieved 0 articles from https://www.technologyreview.com/
+[2024-12-28 19:39:30] WARNING: Retrying https://www.technologyreview.com/ (Attempt 1/3)...
+[2024-12-28 19:39:30] INFO: Fetching articles from https://www.technologyreview.com/
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: MIT Technology Review
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Featured
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Topics
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Newsletters
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Events
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Audio
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Sign in
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: MIT Technology Review
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Featured
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Topics
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Newsletters
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Events
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Audio
+[2024-12-28 19:39:31] INFO: Filtered out by keyword: Sign in
+[2024-12-28 19:39:31] INFO: Retrieved 0 articles from https://www.technologyreview.com/
+[2024-12-28 19:39:31] WARNING: Retrying https://www.technologyreview.com/ (Attempt 2/3)...
+[2024-12-28 19:39:31] INFO: Fetching articles from https://www.technologyreview.com/
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: MIT Technology Review
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Featured
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Topics
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Newsletters
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Events
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Audio
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Sign in
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: MIT Technology Review
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Featured
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Topics
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Newsletters
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Events
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Audio
+[2024-12-28 19:39:32] INFO: Filtered out by keyword: Sign in
+[2024-12-28 19:39:32] INFO: Retrieved 0 articles from https://www.technologyreview.com/
+[2024-12-28 19:39:32] WARNING: Retrying https://www.technologyreview.com/ (Attempt 3/3)...
+[2024-12-28 19:39:32] INFO: Total articles collected so far: 0
+[2024-12-28 19:39:32] INFO: Fetching articles from https://www.cnn.com
+[2024-12-28 19:39:34] INFO: Filtered out by keyword: CNN Underscored
+[2024-12-28 19:39:34] INFO: Missing title or href: <a class="product-zone__title-url" href="https://www.cnn.com/wbd/food-network"></a>
+[2024-12-28 19:39:34] INFO: Filtered out by keyword: Photos
+[2024-12-28 19:39:35] INFO: Missing title or href: <a class="brand-logo__logo-link" data-zjs="click" data-zjs-component_id="https://www.cnn.com" data-zjs-component_text="Main Logo" data-zjs-component_type="icon" data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="https://www.cnn.com" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" href="https://www.cnn.com" title="CNN logo">
+<span class="brand-logo__logo">
+<svg class="brand-logo__icon" fill="none" height="22" viewbox="0 0 46 22" width="46" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M6.10447 11.0001C6.10447 8.531 8.10642 6.52954 10.5752 6.52954H13.9675V3.99665H10.5476C6.68578 3.99665 3.5437 7.13824 3.5437 11.0003C3.5437 14.8619 6.68578 18.0039 10.5476 18.0039L17.1326 18.0037C17.5009 18.0037 17.797 17.6415 17.797 17.3414V4.36936C17.797 3.65427 18.2455 3.05144 18.9127 2.86949C19.482 2.71444 20.2803 2.87169 20.8136 3.77851C20.8386 3.82033 22.4563 6.60902 24.922 10.8592C26.8569 14.1962 28.8589 17.6469 28.8951 17.7083C29.102 18.0599 29.3861 18.2262 29.6561 18.1529C29.8261 18.1067 30.0254 17.9421 30.0254 17.6303V4.36936C30.0256 3.65329 30.4725 3.05021 31.1372 2.869C31.7028 2.71517 32.4971 2.87291 33.0303 3.77851C33.054 3.81813 34.4842 6.28449 36.8376 10.3412C38.9187 13.9289 41.0706 17.6391 41.1112 17.708C41.3184 18.0599 41.603 18.2262 41.8725 18.1529C42.0425 18.1067 42.2418 17.9421 42.2418 17.6305V0.450564H39.703V10.679C39.703 10.679 35.4619 3.3723 35.267 3.04141C32.5744 -1.53207 27.4866 0.358121 27.4866 4.29526V10.679C27.4866 10.679 23.2455 3.3723 23.0506 3.04141C20.358 -1.53207 15.2705 0.358121 15.2702 4.29526V14.7582C15.2715 15.1387 14.9853 15.4703 14.5689 15.4708H10.5752C8.10642 15.4708 6.10447 13.4691 6.10447 11.0001Z" fill-rule="evenodd"></path><path clip-rule="evenodd" d="M43.2542 0.450562V17.6305C43.2542 18.3456 42.8057 18.9487 42.1385 19.1306C42.0158 19.1639 41.8825 19.183 41.7433 19.183C41.2371 19.183 40.6563 18.9328 40.2373 18.2216C40.2148 18.1834 38.5294 15.2776 35.961 10.8494C34.1077 7.65523 32.1919 4.35248 32.1564 4.29208C31.9495 3.94089 31.6683 3.7741 31.4027 3.84649C31.2347 3.89247 31.0378 4.05706 31.0378 4.3696V17.6305C31.0378 18.3458 30.5893 18.9487 29.9219 19.1306C29.3526 19.2854 28.5546 19.1284 28.0209 18.2216C27.9994 18.1849 26.4323 15.484 24.0449 11.3674C22.0449 7.92033 19.9772 4.35542 19.94 4.29208C19.7326 3.94016 19.448 3.77361 19.1787 3.84698C19.0085 3.89345 18.8099 4.05803 18.8099 4.36936L18.8094 17.3414C18.8094 18.2341 18.0256 19.0169 17.132 19.0169H10.547C6.12642 19.0169 2.5302 15.4207 2.5302 11.0003C2.5302 6.57967 6.12642 2.9832 10.547 2.9832H13.9669V0.450562H10.5497C4.72339 0.450562 0 5.17371 0 11.0003C0 16.8264 4.72339 21.5495 10.5497 21.5495H17.1988C19.726 21.5513 21.3514 20.0702 21.3487 17.3385V11.3214C21.3487 11.3214 25.5893 18.6278 25.7845 18.9587C28.477 23.5322 33.5651 21.642 33.5651 17.7048V11.3214C33.5651 11.3214 37.8062 18.6278 38.0006 18.9587C40.693 23.5322 45.781 21.642 45.7815 17.7048V0.450562H43.2542Z" fill-rule="evenodd"></path></svg>
+</span>
+</a>
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: World
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Politics
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Business
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Health
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Entertainment
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Style
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Sports
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Science
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Ukraine-Russia War
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Israel-Hamas War
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Underscored
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Games
+[2024-12-28 19:39:35] INFO: Missing title or href: <a class="header__nav-item-link header__nav-more-link header__nav-button" data-zjs="click" data-zjs-component_id="more_dropdown" data-zjs-component_text="More" data-zjs-component_type="link" data-zjs-container_id="cms.cnn.com/_components/header/instances/cnn-v1@published" data-zjs-container_type="navigation" data-zjs-destination_url="" data-zjs-navigation-location="header" data-zjs-navigation-type="main" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" id="moreDropdown">
+<span class="header__nav-more--toggle-caret header__nav-more--toggle-caret-down">
+                      More
+                    </span>
+</a>
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: World
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Politics
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Business
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Health
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Entertainment
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Style
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Sports
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Science
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Ukraine-Russia War
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Israel-Hamas War
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Underscored
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Games
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Watch
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Listen
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Live TV
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Settings
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Topics You Follow
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Sign Out
+[2024-12-28 19:39:35] INFO: Missing title or href: <a class="user-account-nav__override-link" data-zjs="click" data-zjs-component_id="user-account-nav__override-link" data-zjs-component_text="" data-zjs-component_type="link" data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="#" data-zjs-navigation-location="" data-zjs-navigation-type="" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" href="#"></a>
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Settings
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Topics You Follow
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Sign Out
+[2024-12-28 19:39:35] INFO: Missing title or href: <a class="user-account-nav__override-link" data-zjs="click" data-zjs-component_id="user-account-nav__override-link" data-zjs-component_text="" data-zjs-component_type="link" data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="#" data-zjs-navigation-location="" data-zjs-navigation-type="" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" href="#"></a>
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Live TV
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Listen
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Watch
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: International
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Arabic
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Español
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: International
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Arabic
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Español
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Crime + Justice
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: World
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Africa
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Americas
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Asia
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Australia
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: China
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Europe
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: India
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Middle East
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: United Kingdom
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Politics
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: SCOTUS
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Congress
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Facts First
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: 2024 Elections
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Business
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Tech
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Media
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Calculators
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Videos
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Markets
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Pre-markets
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: After-Hours
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Fear & Greed
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Investing
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Markets Now
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Nightcap
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Health
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Life, But Better
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Fitness
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Food
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Sleep
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Mindfulness
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Relationships
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Entertainment
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Movies
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Television
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Celebrity
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Tech
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Innovate
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Foreseeable Future
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Mission: Ahead
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Work Transformed
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Innovative Cities
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Style
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Arts
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Design
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Fashion
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Architecture
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Luxury
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Beauty
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Video
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Destinations
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Food & Drink
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Stay
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Videos
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Sports
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Pro Football
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: College Football
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Basketball
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Baseball
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Soccer
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Olympics
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Hockey
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Science
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Space
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Life
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Unearthed
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Solutions
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Video
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Ukraine-Russia War
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Israel-Hamas War
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Watch
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Live TV
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN Headlines
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN Shorts
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Shows A-Z
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN10
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN Max
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN TV Schedules
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: FlashDocs
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Listen
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN 5 Things
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Chasing Life with Dr. Sanjay Gupta
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: The Assignment with Audie Cornish
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: One Thing
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Tug of War
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN Political Briefing
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: The Axe Files
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: All There Is with Anderson Cooper
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: All CNN Audio podcasts
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN Underscored
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Electronics
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Fashion
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Beauty
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Health & Fitness
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Home
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Reviews
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Deals
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Gifts
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Outdoors
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Pets
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Games
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN Crossword
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Jumble Crossword
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Photo Shuffle
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Sudoblock
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Sudoku
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: 5 Things Quiz
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: About CNN
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Subscribe
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Photos
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Investigations
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN Profiles
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN Leadership
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: CNN Newsletters
+[2024-12-28 19:39:35] INFO: Filtered out by keyword: Work for CNN
+[2024-12-28 19:39:35] INFO: Missing title or href: <a class="social-links__link" href="https://facebook.com/CNN" rel="noopener noreferrer" target="_blank" title="Visit us on Facebook">
+<svg aria-hidden="true" aria-label="Facebook" class="facebook-icon" fill="" height="64" viewbox="0 0 64 64" width="64" xmlns="https://www.w3.org/2000/svg"><path d="M56,5.1H8c-1.6,0-3,1.4-3,3v48.8c0,1.7,1.3,3,3,3h25.9V38.7h-7v-8.3h7v-6.1 c0-7.1,4.3-10.9,10.5-10.9c3,0,5.9,0.2,6.7,0.3v7.7h-4.7c-3.4,0-4.1,1.6-4.1,4v5h8.1l-1,8.3h-7v21.2H56c1.6,0,3-1.4,3-3V8.1 C59,6.4,57.7,5.1,56,5.1"></path></svg>
+</a>
+[2024-12-28 19:39:35] INFO: Missing title or href: <a class="social-links__link" href="https://twitter.com/CNN" rel="noopener noreferrer" target="_blank" title="Visit us on X">
+<svg aria-hidden="true" aria-label="Twitter" class="twitter-icon" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg"><path d="M13.903 10.469 21.348 2h-1.764l-6.465 7.353L7.955 2H2l7.808 11.12L2 22h1.764l6.828-7.765L16.044 22H22l-8.097-11.531Zm-2.417 2.748-.791-1.107L4.4 3.3h2.71l5.08 7.11.791 1.107 6.604 9.242h-2.71l-5.389-7.542Z" fill=""></path></svg>
+</a>
+[2024-12-28 19:39:35] INFO: Missing title or href: <a class="social-links__link" href="https://instagram.com/CNN" rel="noopener noreferrer" target="_blank" title="Visit us on Instagram">
+<svg aria-hidden="true" aria-label="Instagram" class="instagram-icon" fill="" height="64" viewbox="0 0 64 64" width="64" xmlns="https://www.w3.org/2000/svg"><path d="M47,13.2c-1.9,0-3.5,1.6-3.5,3.6s1.6,3.6,3.5,3.6s3.5-1.6,3.5-3.6S49,13.2,47,13.2 L47,13.2z M31.9,23c-5.1,0-9.3,4.3-9.3,9.5s4.2,9.5,9.3,9.5s9.3-4.3,9.3-9.5S37,23,31.9,23L31.9,23z M31.9,46.7 c-7.7,0-14-6.4-14-14.2s6.3-14.2,14-14.2s14,6.4,14,14.2S39.6,46.7,31.9,46.7L31.9,46.7z M15.7,8.8c-3.9,0-7,3.2-7,7.1v33.2 c0,3.9,3.1,7.1,7,7.1h32.7c3.9,0,7-3.2,7-7.1V15.9c0-3.9-3.1-7.1-7-7.1C48.4,8.8,15.7,8.8,15.7,8.8z M48.3,60.9H15.7 C9.2,60.9,4,55.6,4,49.1V15.9C4,9.4,9.2,4.1,15.7,4.1h32.7C54.8,4.1,60,9.4,60,15.9v33.2C60,55.6,54.8,60.9,48.3,60.9L48.3,60.9z"></path></svg>
+</a>
+[2024-12-28 19:39:35] INFO: Missing title or href: <a class="social-links__link" href="https://www.tiktok.com/@cnn?lang=en" rel="noopener noreferrer" target="_blank" title="Visit us on TikTok">
+<svg aria-label="TikTok" class="tiktok-icon" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18.1156 6.00883C17.038 5.30649 16.2609 4.18226 16.0181 2.8724C15.9659 2.58946 15.9368 2.29799 15.9368 2H12.4984L12.4929 15.7798C12.4352 17.3229 11.165 18.5616 9.60828 18.5616C9.12417 18.5616 8.66866 18.4407 8.26732 18.2295C7.34726 17.7454 6.71767 16.7811 6.71767 15.6715C6.71767 14.0777 8.01448 12.7808 9.60778 12.7808C9.90527 12.7808 10.1907 12.83 10.4606 12.9143V9.40412C10.1812 9.36599 9.89724 9.34241 9.60778 9.34241C6.11818 9.34241 3.27924 12.1814 3.27924 15.6715C3.27924 17.8126 4.34879 19.7074 5.98122 20.8532C7.00914 21.5751 8.2598 22 9.60828 22C13.0979 22 15.9368 19.1611 15.9368 15.6715V8.68372C17.2853 9.65144 18.9378 10.2218 20.7207 10.2218V6.7834C19.7605 6.7834 18.8661 6.49796 18.1156 6.00883Z"></path></svg>
+</a>
+[2024-12-28 19:39:35] INFO: Missing title or href: <a class="social-links__link" href="https://www.linkedin.com/company/cnn" rel="noopener noreferrer" target="_blank" title="Visit us on LinkedIn">
+<svg aria-label="LinkedIn" class="linkedin-icon" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M19.0407 19.0407H16.0778V14.4C16.0778 13.2926 16.0593 11.8704 14.537 11.8704C12.9926 11.8704 12.7556 13.0778 12.7556 14.3222V19.0444H9.79259V9.4963H12.637V10.8H12.6778C13.0741 10.0481 14.0407 9.25926 15.4852 9.25926C18.4889 9.25926 19.0444 11.237 19.0444 13.8074V19.0407H19.0407ZM6.44815 8.19259C5.4963 8.19259 4.72963 7.42222 4.72963 6.47037C4.72963 5.52222 5.49963 4.75185 6.44815 4.75185C7.3963 4.75185 8.16667 5.52222 8.16667 6.47037C8.16667 7.42222 7.3963 8.19259 6.44815 8.19259ZM4.96667 19.0407H7.93333V9.4963H4.96667V19.0407ZM20.5185 2H3.47741C2.66296 2 2 2.64444 2 3.44074V20.5556C2 21.3519 2.66296 22 3.47741 22H20.5185C21.333 22 22 21.3519 22 20.5556V3.44074C22 2.64444 21.337 2 20.5185 2Z" fill-rule="evenodd"></path>
+<mask height="20" id="mask0_0_1" maskunits="userSpaceOnUse" style="mask-type:alpha" width="20" x="2" y="2">
+<path clip-rule="evenodd" d="M19.0407 19.0407H16.0778V14.4C16.0778 13.2926 16.0593 11.8704 14.537 11.8704C12.9926 11.8704 12.7556 13.0778 12.7556 14.3222V19.0444H9.79259V9.4963H12.637V10.8H12.6778C13.0741 10.0481 14.0407 9.25926 15.4852 9.25926C18.4889 9.25926 19.0444 11.237 19.0444 13.8074V19.0407H19.0407ZM6.44815 8.19259C5.4963 8.19259 4.72963 7.42222 4.72963 6.47037C4.72963 5.52222 5.49963 4.75185 6.44815 4.75185C7.3963 4.75185 8.16667 5.52222 8.16667 6.47037C8.16667 7.42222 7.3963 8.19259 6.44815 8.19259ZM4.96667 19.0407H7.93333V9.4963H4.96667V19.0407ZM20.5185 2H3.47741C2.66296 2 2 2.64444 2 3.44074V20.5556C2 21.3519 2.66296 22 3.47741 22H20.5185C21.333 22 22 21.3519 22 20.5556V3.44074C22 2.64444 21.337 2 20.5185 2Z" fill-rule="evenodd"></path>
+</mask>
+</svg>
+</a>
+[2024-12-28 19:39:35] INFO: Retrieved 0 articles from https://www.cnn.com
+[2024-12-28 19:39:35] WARNING: Retrying https://www.cnn.com (Attempt 1/3)...
+[2024-12-28 19:39:35] INFO: Fetching articles from https://www.cnn.com
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN Underscored
+[2024-12-28 19:39:36] INFO: Missing title or href: <a class="product-zone__title-url" href="https://www.cnn.com/wbd/food-network"></a>
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Photos
+[2024-12-28 19:39:36] INFO: Missing title or href: <a class="brand-logo__logo-link" data-zjs="click" data-zjs-component_id="https://www.cnn.com" data-zjs-component_text="Main Logo" data-zjs-component_type="icon" data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="https://www.cnn.com" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" href="https://www.cnn.com" title="CNN logo">
+<span class="brand-logo__logo">
+<svg class="brand-logo__icon" fill="none" height="22" viewbox="0 0 46 22" width="46" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M6.10447 11.0001C6.10447 8.531 8.10642 6.52954 10.5752 6.52954H13.9675V3.99665H10.5476C6.68578 3.99665 3.5437 7.13824 3.5437 11.0003C3.5437 14.8619 6.68578 18.0039 10.5476 18.0039L17.1326 18.0037C17.5009 18.0037 17.797 17.6415 17.797 17.3414V4.36936C17.797 3.65427 18.2455 3.05144 18.9127 2.86949C19.482 2.71444 20.2803 2.87169 20.8136 3.77851C20.8386 3.82033 22.4563 6.60902 24.922 10.8592C26.8569 14.1962 28.8589 17.6469 28.8951 17.7083C29.102 18.0599 29.3861 18.2262 29.6561 18.1529C29.8261 18.1067 30.0254 17.9421 30.0254 17.6303V4.36936C30.0256 3.65329 30.4725 3.05021 31.1372 2.869C31.7028 2.71517 32.4971 2.87291 33.0303 3.77851C33.054 3.81813 34.4842 6.28449 36.8376 10.3412C38.9187 13.9289 41.0706 17.6391 41.1112 17.708C41.3184 18.0599 41.603 18.2262 41.8725 18.1529C42.0425 18.1067 42.2418 17.9421 42.2418 17.6305V0.450564H39.703V10.679C39.703 10.679 35.4619 3.3723 35.267 3.04141C32.5744 -1.53207 27.4866 0.358121 27.4866 4.29526V10.679C27.4866 10.679 23.2455 3.3723 23.0506 3.04141C20.358 -1.53207 15.2705 0.358121 15.2702 4.29526V14.7582C15.2715 15.1387 14.9853 15.4703 14.5689 15.4708H10.5752C8.10642 15.4708 6.10447 13.4691 6.10447 11.0001Z" fill-rule="evenodd"></path><path clip-rule="evenodd" d="M43.2542 0.450562V17.6305C43.2542 18.3456 42.8057 18.9487 42.1385 19.1306C42.0158 19.1639 41.8825 19.183 41.7433 19.183C41.2371 19.183 40.6563 18.9328 40.2373 18.2216C40.2148 18.1834 38.5294 15.2776 35.961 10.8494C34.1077 7.65523 32.1919 4.35248 32.1564 4.29208C31.9495 3.94089 31.6683 3.7741 31.4027 3.84649C31.2347 3.89247 31.0378 4.05706 31.0378 4.3696V17.6305C31.0378 18.3458 30.5893 18.9487 29.9219 19.1306C29.3526 19.2854 28.5546 19.1284 28.0209 18.2216C27.9994 18.1849 26.4323 15.484 24.0449 11.3674C22.0449 7.92033 19.9772 4.35542 19.94 4.29208C19.7326 3.94016 19.448 3.77361 19.1787 3.84698C19.0085 3.89345 18.8099 4.05803 18.8099 4.36936L18.8094 17.3414C18.8094 18.2341 18.0256 19.0169 17.132 19.0169H10.547C6.12642 19.0169 2.5302 15.4207 2.5302 11.0003C2.5302 6.57967 6.12642 2.9832 10.547 2.9832H13.9669V0.450562H10.5497C4.72339 0.450562 0 5.17371 0 11.0003C0 16.8264 4.72339 21.5495 10.5497 21.5495H17.1988C19.726 21.5513 21.3514 20.0702 21.3487 17.3385V11.3214C21.3487 11.3214 25.5893 18.6278 25.7845 18.9587C28.477 23.5322 33.5651 21.642 33.5651 17.7048V11.3214C33.5651 11.3214 37.8062 18.6278 38.0006 18.9587C40.693 23.5322 45.781 21.642 45.7815 17.7048V0.450562H43.2542Z" fill-rule="evenodd"></path></svg>
+</span>
+</a>
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: World
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Politics
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Business
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Health
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Entertainment
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Style
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Sports
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Science
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Ukraine-Russia War
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Israel-Hamas War
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Underscored
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Games
+[2024-12-28 19:39:36] INFO: Missing title or href: <a class="header__nav-item-link header__nav-more-link header__nav-button" data-zjs="click" data-zjs-component_id="more_dropdown" data-zjs-component_text="More" data-zjs-component_type="link" data-zjs-container_id="cms.cnn.com/_components/header/instances/cnn-v1@published" data-zjs-container_type="navigation" data-zjs-destination_url="" data-zjs-navigation-location="header" data-zjs-navigation-type="main" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" id="moreDropdown">
+<span class="header__nav-more--toggle-caret header__nav-more--toggle-caret-down">
+                      More
+                    </span>
+</a>
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: World
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Politics
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Business
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Health
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Entertainment
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Style
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Sports
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Science
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Ukraine-Russia War
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Israel-Hamas War
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Underscored
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Games
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Watch
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Listen
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Live TV
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Settings
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Topics You Follow
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Sign Out
+[2024-12-28 19:39:36] INFO: Missing title or href: <a class="user-account-nav__override-link" data-zjs="click" data-zjs-component_id="user-account-nav__override-link" data-zjs-component_text="" data-zjs-component_type="link" data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="#" data-zjs-navigation-location="" data-zjs-navigation-type="" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" href="#"></a>
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Settings
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Topics You Follow
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Sign Out
+[2024-12-28 19:39:36] INFO: Missing title or href: <a class="user-account-nav__override-link" data-zjs="click" data-zjs-component_id="user-account-nav__override-link" data-zjs-component_text="" data-zjs-component_type="link" data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="#" data-zjs-navigation-location="" data-zjs-navigation-type="" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" href="#"></a>
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Live TV
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Listen
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Watch
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: International
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Arabic
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Español
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: International
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Arabic
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Español
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Crime + Justice
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: World
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Africa
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Americas
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Asia
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Australia
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: China
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Europe
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: India
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Middle East
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: United Kingdom
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Politics
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: SCOTUS
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Congress
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Facts First
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: 2024 Elections
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Business
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Tech
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Media
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Calculators
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Videos
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Markets
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Pre-markets
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: After-Hours
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Fear & Greed
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Investing
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Markets Now
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Nightcap
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Health
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Life, But Better
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Fitness
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Food
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Sleep
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Mindfulness
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Relationships
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Entertainment
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Movies
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Television
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Celebrity
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Tech
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Innovate
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Foreseeable Future
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Mission: Ahead
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Work Transformed
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Innovative Cities
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Style
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Arts
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Design
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Fashion
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Architecture
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Luxury
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Beauty
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Video
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Destinations
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Food & Drink
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Stay
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Videos
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Sports
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Pro Football
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: College Football
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Basketball
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Baseball
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Soccer
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Olympics
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Hockey
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Science
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Space
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Life
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Unearthed
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Solutions
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Video
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Ukraine-Russia War
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Israel-Hamas War
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Watch
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Live TV
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN Headlines
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN Shorts
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Shows A-Z
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN10
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN Max
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN TV Schedules
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: FlashDocs
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Listen
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN 5 Things
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Chasing Life with Dr. Sanjay Gupta
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: The Assignment with Audie Cornish
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: One Thing
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Tug of War
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN Political Briefing
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: The Axe Files
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: All There Is with Anderson Cooper
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: All CNN Audio podcasts
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN Underscored
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Electronics
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Fashion
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Beauty
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Health & Fitness
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Home
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Reviews
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Deals
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Gifts
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Outdoors
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Pets
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Games
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN Crossword
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Jumble Crossword
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Photo Shuffle
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Sudoblock
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Sudoku
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: 5 Things Quiz
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: About CNN
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Subscribe
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Photos
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Investigations
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN Profiles
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN Leadership
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: CNN Newsletters
+[2024-12-28 19:39:36] INFO: Filtered out by keyword: Work for CNN
+[2024-12-28 19:39:36] INFO: Missing title or href: <a class="social-links__link" href="https://facebook.com/CNN" rel="noopener noreferrer" target="_blank" title="Visit us on Facebook">
+<svg aria-hidden="true" aria-label="Facebook" class="facebook-icon" fill="" height="64" viewbox="0 0 64 64" width="64" xmlns="https://www.w3.org/2000/svg"><path d="M56,5.1H8c-1.6,0-3,1.4-3,3v48.8c0,1.7,1.3,3,3,3h25.9V38.7h-7v-8.3h7v-6.1 c0-7.1,4.3-10.9,10.5-10.9c3,0,5.9,0.2,6.7,0.3v7.7h-4.7c-3.4,0-4.1,1.6-4.1,4v5h8.1l-1,8.3h-7v21.2H56c1.6,0,3-1.4,3-3V8.1 C59,6.4,57.7,5.1,56,5.1"></path></svg>
+</a>
+[2024-12-28 19:39:36] INFO: Missing title or href: <a class="social-links__link" href="https://twitter.com/CNN" rel="noopener noreferrer" target="_blank" title="Visit us on X">
+<svg aria-hidden="true" aria-label="Twitter" class="twitter-icon" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg"><path d="M13.903 10.469 21.348 2h-1.764l-6.465 7.353L7.955 2H2l7.808 11.12L2 22h1.764l6.828-7.765L16.044 22H22l-8.097-11.531Zm-2.417 2.748-.791-1.107L4.4 3.3h2.71l5.08 7.11.791 1.107 6.604 9.242h-2.71l-5.389-7.542Z" fill=""></path></svg>
+</a>
+[2024-12-28 19:39:36] INFO: Missing title or href: <a class="social-links__link" href="https://instagram.com/CNN" rel="noopener noreferrer" target="_blank" title="Visit us on Instagram">
+<svg aria-hidden="true" aria-label="Instagram" class="instagram-icon" fill="" height="64" viewbox="0 0 64 64" width="64" xmlns="https://www.w3.org/2000/svg"><path d="M47,13.2c-1.9,0-3.5,1.6-3.5,3.6s1.6,3.6,3.5,3.6s3.5-1.6,3.5-3.6S49,13.2,47,13.2 L47,13.2z M31.9,23c-5.1,0-9.3,4.3-9.3,9.5s4.2,9.5,9.3,9.5s9.3-4.3,9.3-9.5S37,23,31.9,23L31.9,23z M31.9,46.7 c-7.7,0-14-6.4-14-14.2s6.3-14.2,14-14.2s14,6.4,14,14.2S39.6,46.7,31.9,46.7L31.9,46.7z M15.7,8.8c-3.9,0-7,3.2-7,7.1v33.2 c0,3.9,3.1,7.1,7,7.1h32.7c3.9,0,7-3.2,7-7.1V15.9c0-3.9-3.1-7.1-7-7.1C48.4,8.8,15.7,8.8,15.7,8.8z M48.3,60.9H15.7 C9.2,60.9,4,55.6,4,49.1V15.9C4,9.4,9.2,4.1,15.7,4.1h32.7C54.8,4.1,60,9.4,60,15.9v33.2C60,55.6,54.8,60.9,48.3,60.9L48.3,60.9z"></path></svg>
+</a>
+[2024-12-28 19:39:36] INFO: Missing title or href: <a class="social-links__link" href="https://www.tiktok.com/@cnn?lang=en" rel="noopener noreferrer" target="_blank" title="Visit us on TikTok">
+<svg aria-label="TikTok" class="tiktok-icon" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18.1156 6.00883C17.038 5.30649 16.2609 4.18226 16.0181 2.8724C15.9659 2.58946 15.9368 2.29799 15.9368 2H12.4984L12.4929 15.7798C12.4352 17.3229 11.165 18.5616 9.60828 18.5616C9.12417 18.5616 8.66866 18.4407 8.26732 18.2295C7.34726 17.7454 6.71767 16.7811 6.71767 15.6715C6.71767 14.0777 8.01448 12.7808 9.60778 12.7808C9.90527 12.7808 10.1907 12.83 10.4606 12.9143V9.40412C10.1812 9.36599 9.89724 9.34241 9.60778 9.34241C6.11818 9.34241 3.27924 12.1814 3.27924 15.6715C3.27924 17.8126 4.34879 19.7074 5.98122 20.8532C7.00914 21.5751 8.2598 22 9.60828 22C13.0979 22 15.9368 19.1611 15.9368 15.6715V8.68372C17.2853 9.65144 18.9378 10.2218 20.7207 10.2218V6.7834C19.7605 6.7834 18.8661 6.49796 18.1156 6.00883Z"></path></svg>
+</a>
+[2024-12-28 19:39:36] INFO: Missing title or href: <a class="social-links__link" href="https://www.linkedin.com/company/cnn" rel="noopener noreferrer" target="_blank" title="Visit us on LinkedIn">
+<svg aria-label="LinkedIn" class="linkedin-icon" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M19.0407 19.0407H16.0778V14.4C16.0778 13.2926 16.0593 11.8704 14.537 11.8704C12.9926 11.8704 12.7556 13.0778 12.7556 14.3222V19.0444H9.79259V9.4963H12.637V10.8H12.6778C13.0741 10.0481 14.0407 9.25926 15.4852 9.25926C18.4889 9.25926 19.0444 11.237 19.0444 13.8074V19.0407H19.0407ZM6.44815 8.19259C5.4963 8.19259 4.72963 7.42222 4.72963 6.47037C4.72963 5.52222 5.49963 4.75185 6.44815 4.75185C7.3963 4.75185 8.16667 5.52222 8.16667 6.47037C8.16667 7.42222 7.3963 8.19259 6.44815 8.19259ZM4.96667 19.0407H7.93333V9.4963H4.96667V19.0407ZM20.5185 2H3.47741C2.66296 2 2 2.64444 2 3.44074V20.5556C2 21.3519 2.66296 22 3.47741 22H20.5185C21.333 22 22 21.3519 22 20.5556V3.44074C22 2.64444 21.337 2 20.5185 2Z" fill-rule="evenodd"></path>
+<mask height="20" id="mask0_0_1" maskunits="userSpaceOnUse" style="mask-type:alpha" width="20" x="2" y="2">
+<path clip-rule="evenodd" d="M19.0407 19.0407H16.0778V14.4C16.0778 13.2926 16.0593 11.8704 14.537 11.8704C12.9926 11.8704 12.7556 13.0778 12.7556 14.3222V19.0444H9.79259V9.4963H12.637V10.8H12.6778C13.0741 10.0481 14.0407 9.25926 15.4852 9.25926C18.4889 9.25926 19.0444 11.237 19.0444 13.8074V19.0407H19.0407ZM6.44815 8.19259C5.4963 8.19259 4.72963 7.42222 4.72963 6.47037C4.72963 5.52222 5.49963 4.75185 6.44815 4.75185C7.3963 4.75185 8.16667 5.52222 8.16667 6.47037C8.16667 7.42222 7.3963 8.19259 6.44815 8.19259ZM4.96667 19.0407H7.93333V9.4963H4.96667V19.0407ZM20.5185 2H3.47741C2.66296 2 2 2.64444 2 3.44074V20.5556C2 21.3519 2.66296 22 3.47741 22H20.5185C21.333 22 22 21.3519 22 20.5556V3.44074C22 2.64444 21.337 2 20.5185 2Z" fill-rule="evenodd"></path>
+</mask>
+</svg>
+</a>
+[2024-12-28 19:39:36] INFO: Retrieved 0 articles from https://www.cnn.com
+[2024-12-28 19:39:36] WARNING: Retrying https://www.cnn.com (Attempt 2/3)...
+[2024-12-28 19:39:36] INFO: Fetching articles from https://www.cnn.com
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN Underscored
+[2024-12-28 19:39:38] INFO: Missing title or href: <a class="product-zone__title-url" href="https://www.cnn.com/wbd/food-network"></a>
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Photos
+[2024-12-28 19:39:38] INFO: Missing title or href: <a class="brand-logo__logo-link" data-zjs="click" data-zjs-component_id="https://www.cnn.com" data-zjs-component_text="Main Logo" data-zjs-component_type="icon" data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="https://www.cnn.com" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" href="https://www.cnn.com" title="CNN logo">
+<span class="brand-logo__logo">
+<svg class="brand-logo__icon" fill="none" height="22" viewbox="0 0 46 22" width="46" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M6.10447 11.0001C6.10447 8.531 8.10642 6.52954 10.5752 6.52954H13.9675V3.99665H10.5476C6.68578 3.99665 3.5437 7.13824 3.5437 11.0003C3.5437 14.8619 6.68578 18.0039 10.5476 18.0039L17.1326 18.0037C17.5009 18.0037 17.797 17.6415 17.797 17.3414V4.36936C17.797 3.65427 18.2455 3.05144 18.9127 2.86949C19.482 2.71444 20.2803 2.87169 20.8136 3.77851C20.8386 3.82033 22.4563 6.60902 24.922 10.8592C26.8569 14.1962 28.8589 17.6469 28.8951 17.7083C29.102 18.0599 29.3861 18.2262 29.6561 18.1529C29.8261 18.1067 30.0254 17.9421 30.0254 17.6303V4.36936C30.0256 3.65329 30.4725 3.05021 31.1372 2.869C31.7028 2.71517 32.4971 2.87291 33.0303 3.77851C33.054 3.81813 34.4842 6.28449 36.8376 10.3412C38.9187 13.9289 41.0706 17.6391 41.1112 17.708C41.3184 18.0599 41.603 18.2262 41.8725 18.1529C42.0425 18.1067 42.2418 17.9421 42.2418 17.6305V0.450564H39.703V10.679C39.703 10.679 35.4619 3.3723 35.267 3.04141C32.5744 -1.53207 27.4866 0.358121 27.4866 4.29526V10.679C27.4866 10.679 23.2455 3.3723 23.0506 3.04141C20.358 -1.53207 15.2705 0.358121 15.2702 4.29526V14.7582C15.2715 15.1387 14.9853 15.4703 14.5689 15.4708H10.5752C8.10642 15.4708 6.10447 13.4691 6.10447 11.0001Z" fill-rule="evenodd"></path><path clip-rule="evenodd" d="M43.2542 0.450562V17.6305C43.2542 18.3456 42.8057 18.9487 42.1385 19.1306C42.0158 19.1639 41.8825 19.183 41.7433 19.183C41.2371 19.183 40.6563 18.9328 40.2373 18.2216C40.2148 18.1834 38.5294 15.2776 35.961 10.8494C34.1077 7.65523 32.1919 4.35248 32.1564 4.29208C31.9495 3.94089 31.6683 3.7741 31.4027 3.84649C31.2347 3.89247 31.0378 4.05706 31.0378 4.3696V17.6305C31.0378 18.3458 30.5893 18.9487 29.9219 19.1306C29.3526 19.2854 28.5546 19.1284 28.0209 18.2216C27.9994 18.1849 26.4323 15.484 24.0449 11.3674C22.0449 7.92033 19.9772 4.35542 19.94 4.29208C19.7326 3.94016 19.448 3.77361 19.1787 3.84698C19.0085 3.89345 18.8099 4.05803 18.8099 4.36936L18.8094 17.3414C18.8094 18.2341 18.0256 19.0169 17.132 19.0169H10.547C6.12642 19.0169 2.5302 15.4207 2.5302 11.0003C2.5302 6.57967 6.12642 2.9832 10.547 2.9832H13.9669V0.450562H10.5497C4.72339 0.450562 0 5.17371 0 11.0003C0 16.8264 4.72339 21.5495 10.5497 21.5495H17.1988C19.726 21.5513 21.3514 20.0702 21.3487 17.3385V11.3214C21.3487 11.3214 25.5893 18.6278 25.7845 18.9587C28.477 23.5322 33.5651 21.642 33.5651 17.7048V11.3214C33.5651 11.3214 37.8062 18.6278 38.0006 18.9587C40.693 23.5322 45.781 21.642 45.7815 17.7048V0.450562H43.2542Z" fill-rule="evenodd"></path></svg>
+</span>
+</a>
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: World
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Politics
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Business
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Health
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Entertainment
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Style
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Sports
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Science
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Ukraine-Russia War
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Israel-Hamas War
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Underscored
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Games
+[2024-12-28 19:39:38] INFO: Missing title or href: <a class="header__nav-item-link header__nav-more-link header__nav-button" data-zjs="click" data-zjs-component_id="more_dropdown" data-zjs-component_text="More" data-zjs-component_type="link" data-zjs-container_id="cms.cnn.com/_components/header/instances/cnn-v1@published" data-zjs-container_type="navigation" data-zjs-destination_url="" data-zjs-navigation-location="header" data-zjs-navigation-type="main" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" id="moreDropdown">
+<span class="header__nav-more--toggle-caret header__nav-more--toggle-caret-down">
+                      More
+                    </span>
+</a>
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: World
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Politics
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Business
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Health
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Entertainment
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Style
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Sports
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Science
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Ukraine-Russia War
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Israel-Hamas War
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Underscored
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Games
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Watch
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Listen
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Live TV
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Settings
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Topics You Follow
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Sign Out
+[2024-12-28 19:39:38] INFO: Missing title or href: <a class="user-account-nav__override-link" data-zjs="click" data-zjs-component_id="user-account-nav__override-link" data-zjs-component_text="" data-zjs-component_type="link" data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="#" data-zjs-navigation-location="" data-zjs-navigation-type="" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" href="#"></a>
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Settings
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Topics You Follow
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Sign Out
+[2024-12-28 19:39:38] INFO: Missing title or href: <a class="user-account-nav__override-link" data-zjs="click" data-zjs-component_id="user-account-nav__override-link" data-zjs-component_text="" data-zjs-component_type="link" data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="#" data-zjs-navigation-location="" data-zjs-navigation-type="" data-zjs-page_type="section" data-zjs-page_variant="landing_homepage" href="#"></a>
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Live TV
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Listen
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Watch
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: International
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Arabic
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Español
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: International
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Arabic
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Español
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: US
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Crime + Justice
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: World
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Africa
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Americas
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Asia
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Australia
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: China
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Europe
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: India
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Middle East
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: United Kingdom
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Politics
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: SCOTUS
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Congress
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Facts First
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: 2024 Elections
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Business
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Tech
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Media
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Calculators
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Videos
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Markets
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Pre-markets
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: After-Hours
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Fear & Greed
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Investing
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Markets Now
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Nightcap
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Health
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Life, But Better
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Fitness
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Food
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Sleep
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Mindfulness
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Relationships
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Entertainment
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Movies
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Television
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Celebrity
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Tech
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Innovate
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Foreseeable Future
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Mission: Ahead
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Work Transformed
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Innovative Cities
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Style
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Arts
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Design
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Fashion
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Architecture
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Luxury
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Beauty
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Video
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Destinations
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Food & Drink
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Stay
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Videos
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Sports
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Pro Football
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: College Football
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Basketball
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Baseball
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Soccer
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Olympics
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Hockey
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Science
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Space
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Life
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Unearthed
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Solutions
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Weather
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Video
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Climate
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Ukraine-Russia War
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Israel-Hamas War
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Watch
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Live TV
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN Headlines
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN Shorts
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Shows A-Z
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN10
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN Max
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN TV Schedules
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: FlashDocs
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Listen
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN 5 Things
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Chasing Life with Dr. Sanjay Gupta
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: The Assignment with Audie Cornish
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: One Thing
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Tug of War
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN Political Briefing
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: The Axe Files
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: All There Is with Anderson Cooper
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: All CNN Audio podcasts
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN Underscored
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Electronics
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Fashion
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Beauty
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Health & Fitness
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Home
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Reviews
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Deals
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Gifts
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Travel
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Outdoors
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Pets
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Games
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN Crossword
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Jumble Crossword
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Photo Shuffle
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Sudoblock
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Sudoku
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: 5 Things Quiz
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: About CNN
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Subscribe
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Photos
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Investigations
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN Profiles
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN Leadership
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: CNN Newsletters
+[2024-12-28 19:39:38] INFO: Filtered out by keyword: Work for CNN
+[2024-12-28 19:39:38] INFO: Missing title or href: <a class="social-links__link" href="https://facebook.com/CNN" rel="noopener noreferrer" target="_blank" title="Visit us on Facebook">
+<svg aria-hidden="true" aria-label="Facebook" class="facebook-icon" fill="" height="64" viewbox="0 0 64 64" width="64" xmlns="https://www.w3.org/2000/svg"><path d="M56,5.1H8c-1.6,0-3,1.4-3,3v48.8c0,1.7,1.3,3,3,3h25.9V38.7h-7v-8.3h7v-6.1 c0-7.1,4.3-10.9,10.5-10.9c3,0,5.9,0.2,6.7,0.3v7.7h-4.7c-3.4,0-4.1,1.6-4.1,4v5h8.1l-1,8.3h-7v21.2H56c1.6,0,3-1.4,3-3V8.1 C59,6.4,57.7,5.1,56,5.1"></path></svg>
+</a>
+[2024-12-28 19:39:38] INFO: Missing title or href: <a class="social-links__link" href="https://twitter.com/CNN" rel="noopener noreferrer" target="_blank" title="Visit us on X">
+<svg aria-hidden="true" aria-label="Twitter" class="twitter-icon" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg"><path d="M13.903 10.469 21.348 2h-1.764l-6.465 7.353L7.955 2H2l7.808 11.12L2 22h1.764l6.828-7.765L16.044 22H22l-8.097-11.531Zm-2.417 2.748-.791-1.107L4.4 3.3h2.71l5.08 7.11.791 1.107 6.604 9.242h-2.71l-5.389-7.542Z" fill=""></path></svg>
+</a>
+[2024-12-28 19:39:38] INFO: Missing title or href: <a class="social-links__link" href="https://instagram.com/CNN" rel="noopener noreferrer" target="_blank" title="Visit us on Instagram">
+<svg aria-hidden="true" aria-label="Instagram" class="instagram-icon" fill="" height="64" viewbox="0 0 64 64" width="64" xmlns="https://www.w3.org/2000/svg"><path d="M47,13.2c-1.9,0-3.5,1.6-3.5,3.6s1.6,3.6,3.5,3.6s3.5-1.6,3.5-3.6S49,13.2,47,13.2 L47,13.2z M31.9,23c-5.1,0-9.3,4.3-9.3,9.5s4.2,9.5,9.3,9.5s9.3-4.3,9.3-9.5S37,23,31.9,23L31.9,23z M31.9,46.7 c-7.7,0-14-6.4-14-14.2s6.3-14.2,14-14.2s14,6.4,14,14.2S39.6,46.7,31.9,46.7L31.9,46.7z M15.7,8.8c-3.9,0-7,3.2-7,7.1v33.2 c0,3.9,3.1,7.1,7,7.1h32.7c3.9,0,7-3.2,7-7.1V15.9c0-3.9-3.1-7.1-7-7.1C48.4,8.8,15.7,8.8,15.7,8.8z M48.3,60.9H15.7 C9.2,60.9,4,55.6,4,49.1V15.9C4,9.4,9.2,4.1,15.7,4.1h32.7C54.8,4.1,60,9.4,60,15.9v33.2C60,55.6,54.8,60.9,48.3,60.9L48.3,60.9z"></path></svg>
+</a>
+[2024-12-28 19:39:38] INFO: Missing title or href: <a class="social-links__link" href="https://www.tiktok.com/@cnn?lang=en" rel="noopener noreferrer" target="_blank" title="Visit us on TikTok">
+<svg aria-label="TikTok" class="tiktok-icon" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18.1156 6.00883C17.038 5.30649 16.2609 4.18226 16.0181 2.8724C15.9659 2.58946 15.9368 2.29799 15.9368 2H12.4984L12.4929 15.7798C12.4352 17.3229 11.165 18.5616 9.60828 18.5616C9.12417 18.5616 8.66866 18.4407 8.26732 18.2295C7.34726 17.7454 6.71767 16.7811 6.71767 15.6715C6.71767 14.0777 8.01448 12.7808 9.60778 12.7808C9.90527 12.7808 10.1907 12.83 10.4606 12.9143V9.40412C10.1812 9.36599 9.89724 9.34241 9.60778 9.34241C6.11818 9.34241 3.27924 12.1814 3.27924 15.6715C3.27924 17.8126 4.34879 19.7074 5.98122 20.8532C7.00914 21.5751 8.2598 22 9.60828 22C13.0979 22 15.9368 19.1611 15.9368 15.6715V8.68372C17.2853 9.65144 18.9378 10.2218 20.7207 10.2218V6.7834C19.7605 6.7834 18.8661 6.49796 18.1156 6.00883Z"></path></svg>
+</a>
+[2024-12-28 19:39:38] INFO: Missing title or href: <a class="social-links__link" href="https://www.linkedin.com/company/cnn" rel="noopener noreferrer" target="_blank" title="Visit us on LinkedIn">
+<svg aria-label="LinkedIn" class="linkedin-icon" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M19.0407 19.0407H16.0778V14.4C16.0778 13.2926 16.0593 11.8704 14.537 11.8704C12.9926 11.8704 12.7556 13.0778 12.7556 14.3222V19.0444H9.79259V9.4963H12.637V10.8H12.6778C13.0741 10.0481 14.0407 9.25926 15.4852 9.25926C18.4889 9.25926 19.0444 11.237 19.0444 13.8074V19.0407H19.0407ZM6.44815 8.19259C5.4963 8.19259 4.72963 7.42222 4.72963 6.47037C4.72963 5.52222 5.49963 4.75185 6.44815 4.75185C7.3963 4.75185 8.16667 5.52222 8.16667 6.47037C8.16667 7.42222 7.3963 8.19259 6.44815 8.19259ZM4.96667 19.0407H7.93333V9.4963H4.96667V19.0407ZM20.5185 2H3.47741C2.66296 2 2 2.64444 2 3.44074V20.5556C2 21.3519 2.66296 22 3.47741 22H20.5185C21.333 22 22 21.3519 22 20.5556V3.44074C22 2.64444 21.337 2 20.5185 2Z" fill-rule="evenodd"></path>
+<mask height="20" id="mask0_0_1" maskunits="userSpaceOnUse" style="mask-type:alpha" width="20" x="2" y="2">
+<path clip-rule="evenodd" d="M19.0407 19.0407H16.0778V14.4C16.0778 13.2926 16.0593 11.8704 14.537 11.8704C12.9926 11.8704 12.7556 13.0778 12.7556 14.3222V19.0444H9.79259V9.4963H12.637V10.8H12.6778C13.0741 10.0481 14.0407 9.25926 15.4852 9.25926C18.4889 9.25926 19.0444 11.237 19.0444 13.8074V19.0407H19.0407ZM6.44815 8.19259C5.4963 8.19259 4.72963 7.42222 4.72963 6.47037C4.72963 5.52222 5.49963 4.75185 6.44815 4.75185C7.3963 4.75185 8.16667 5.52222 8.16667 6.47037C8.16667 7.42222 7.3963 8.19259 6.44815 8.19259ZM4.96667 19.0407H7.93333V9.4963H4.96667V19.0407ZM20.5185 2H3.47741C2.66296 2 2 2.64444 2 3.44074V20.5556C2 21.3519 2.66296 22 3.47741 22H20.5185C21.333 22 22 21.3519 22 20.5556V3.44074C22 2.64444 21.337 2 20.5185 2Z" fill-rule="evenodd"></path>
+</mask>
+</svg>
+</a>
+[2024-12-28 19:39:38] INFO: Retrieved 0 articles from https://www.cnn.com
+[2024-12-28 19:39:38] WARNING: Retrying https://www.cnn.com (Attempt 3/3)...
+[2024-12-28 19:39:38] INFO: Total articles collected so far: 0
+[2024-12-28 19:39:38] WARNING: Fewer than 100 articles found. Adjusting search criteria or adding more websites might be necessary.
+[2024-12-28 19:39:38] WARNING: No articles to save to CSV.
+[2024-12-28 19:39:38] INFO: Scraping completed. Articles saved to articles_2024-12-28_19-39-38.csv

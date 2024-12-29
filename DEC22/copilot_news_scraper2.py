@@ -5,7 +5,6 @@ import json
 import logging
 from datetime import datetime
 from urllib.parse import urlparse
-import os
 
 # --- Configuration ---
 CONFIG = {}
@@ -18,7 +17,6 @@ except FileNotFoundError:
 
 # --- Global Variables ---
 KEYWORDS = CONFIG.get("KEYWORDS", [])
-FETCHED_ARTICLES_FILE = "fetched_articles.json"
 
 # --- Logging Setup ---
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -26,7 +24,7 @@ log_filename = f"copilot_news_scraper_log_{timestamp}.log"
 logging.basicConfig(
     filename=log_filename,
     level=logging.INFO,
-    format="[%(asctime)s] %(message)s",
+    format="[%(asctime)s] %(levelname)s: %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S"
 )
 console_handler = logging.StreamHandler()
@@ -39,6 +37,21 @@ logging.info("Script execution started.")  # Log the script start
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
 }
+
+# --- Persistent Storage for Seen Articles ---
+def load_seen_articles(filename="seen_articles.json"):
+    """Load previously seen articles from a JSON file."""
+    try:
+        with open(filename, "r") as file:
+            return set(json.load(file))  # Load as a set for fast lookups
+    except FileNotFoundError:
+        logging.info(f"{filename} not found. Starting fresh.")
+        return set()  # Return an empty set if the file doesn't exist
+
+def save_seen_articles(seen_articles, filename="seen_articles.json"):
+    """Save seen articles to a JSON file."""
+    with open(filename, "w") as file:
+        json.dump(list(seen_articles), file)  # Convert set to list for JSON serialization
 
 def get_source_name(url):
     """Extract the source name from a URL."""
@@ -79,86 +92,46 @@ def fetch_articles(url):
         logging.error(f"Error fetching articles from {url}: {e}")
         return []
 
-def save_to_csv(articles, filename):
-    """Save articles to a CSV file with hyperlinked URLs."""
+def save_to_csv(articles, filename, seen_articles):
+    """Save unique articles to a CSV file and update seen_articles."""
     if not articles:
         logging.warning("No articles to save to CSV.")
         return
 
-    unique_articles = []
-    seen = load_fetched_articles()
-
+    new_articles = []
     for article in articles:
-        identifier = f"{article['title']}::{article['link']}"
-        if identifier not in seen:
-            unique_articles.append(article)
-            seen[identifier] = True
-        else:
-            logging.info(f"Duplicate article skipped: {article['title']}")
+        identifier = (article["title"], article["link"])  # Use a tuple as a unique identifier
+        if identifier not in seen_articles:
+            new_articles.append(article)
+            seen_articles.add(identifier)  # Add to the seen list
 
-    # Log unique articles count before saving
-    logging.info(f"Number of unique articles: {len(unique_articles)}")
+    if not new_articles:
+        logging.info("No new articles found. Nothing to save.")
+        return
 
     with open(filename, mode="w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         writer.writerow(["Publisher_Name", "Headline_Title", "Link"])
-        for article in unique_articles:
-            logging.info(f"Saving article: {article['source']} - {article['title']}")  # Log each article being saved
+        for article in new_articles:
+            logging.info(f"Saving article: {article['source']} - {article['title']}")  # Log each saved article
             writer.writerow([
                 article["source"],
                 article["title"],
-                f'=HYPERLINK("{article["link"]}", "Link")'  # Display "Link" as the clickable URL
+                f'=HYPERLINK("{article["link"]}", "Link")'
             ])
-    logging.info(f"Saved {len(unique_articles)} articles to {filename}")
-    save_fetched_articles(seen)
-
-def load_fetched_articles():
-    """Load previously fetched articles from a file."""
-    if os.path.exists(FETCHED_ARTICLES_FILE):
-        with open(FETCHED_ARTICLES_FILE, "r") as file:
-            return json.load(file)
-    return {}
-
-def save_fetched_articles(articles):
-    """Save fetched articles to a file."""
-    with open(FETCHED_ARTICLES_FILE, "w") as file:
-        json.dump(articles, file)
+    logging.info(f"Saved {len(new_articles)} new articles to {filename}")
 
 def main():
     logging.info("Starting article scraping...")
     all_articles = []
     max_retries = 3
 
+    # Load previously seen articles
+    seen_articles = load_seen_articles()
+
     dynamic_websites = [
         "https://www.technologyreview.com/",
         "https://www.cnn.com",
-        "https://www.blackenterprise.com/",
-        "https://www.nytimes.com",
-        "https://thelegalwire.ai/",
-        "https://www.theguardian.com",
-        "https://www.analyticsinsight.net/",
-        "https://thegrio.com/",
-        "https://spectrum.ieee.org/",
-        "https://www.semafor.com/",
-        "https://www.kdnuggets.com/",
-        "https://www.theroot.com/",
-        "https://www.essence.com/",
-        "https://www.openai.com",
-        "https://www.blackenterprise.com/",
-        "https://aibusiness.com/",
-        "https://atlantablackstar.com/",
-        "https://www.huffpost.com/voices/black-voices",
-        "https://newsone.com/",
-        "https://insideainews.com/",
-        "https://blackgirlnerds.com/",
-        "https://www.artificialintelligence-news.com/",
-        "https://www.informs.org/",
-        "https://www.dbta.com/",
-        "https://www.aitrends.com/",
-        "https://www.datasciencecentral.com/",
-        "https://www.techrepublic.com/",
-        "https://www.dataversity.net/",
-        "https://ground.news/",            
         # Add more websites as needed
     ]
 
@@ -178,7 +151,11 @@ def main():
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     output_file = f"articles_{timestamp}.csv"
-    save_to_csv(all_articles, output_file)
+    save_to_csv(all_articles, output_file, seen_articles)
+
+    # Save updated seen articles
+    save_seen_articles(seen_articles)
+
     logging.info(f"Scraping completed. Articles saved to {output_file}")
 
 if __name__ == "__main__":
