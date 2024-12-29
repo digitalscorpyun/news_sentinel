@@ -9,10 +9,9 @@ print(message)
 #The print() function is a built-in Python function that is used to display text or variables on the console.
 #It can be used to output messages, variables, or any other information that needs to be displayed to the user.
 #The message can be formatted using string concatenation, string interpolation, or other string manipulation techniques.
-
 message = 'crimson dragon'
 message.rstrip()
 print(message)
-
+#This code snippet creates a string variable called message with the value 'crimson dragon'.
 message = "One of Python's strengths is its diverse and supportive community."
 print(message)

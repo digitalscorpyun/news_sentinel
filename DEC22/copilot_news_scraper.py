@@ -127,7 +127,7 @@ def main():
         "https://www.semafor.com/",
         "https://www.kdnuggets.com/",
         "https://www.theroot.com/",
-        "https://www.essence.com/",
+        "https://www.contrabandcamp.com/",
         "https://www.openai.com",
         "https://www.blackenterprise.com/",
         "https://aibusiness.com/",
@@ -142,7 +142,7 @@ def main():
         "https://www.aitrends.com/",
         "https://www.datasciencecentral.com/",
         "https://www.techrepublic.com/",
-        "https://www.dataversity.net/",
+        "https://www.economist.com/",
         "https://ground.news/",            
         # Add more websites as needed
     ]
